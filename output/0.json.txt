@@ -1,0 +1,307 @@
+{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "do", 
+                            0.03, 
+                            0.12
+                        ], 
+                        [
+                            "you", 
+                            0.12, 
+                            0.4
+                        ], 
+                        [
+                            "do", 
+                            0.4, 
+                            0.65
+                        ]
+                    ], 
+                    "transcript": "do you do "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "do", 
+                            0.03, 
+                            0.12
+                        ], 
+                        [
+                            "you", 
+                            0.12, 
+                            0.4
+                        ], 
+                        [
+                            "do", 
+                            0.4, 
+                            0.7
+                        ], 
+                        [
+                            "you", 
+                            0.7, 
+                            0.89
+                        ]
+                    ], 
+                    "transcript": "do you do you "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "do", 
+                            0.03, 
+                            0.12
+                        ], 
+                        [
+                            "you", 
+                            0.12, 
+                            0.4
+                        ], 
+                        [
+                            "do", 
+                            0.4, 
+                            0.7
+                        ], 
+                        [
+                            "you", 
+                            0.7, 
+                            1.01
+                        ]
+                    ], 
+                    "transcript": "do you do you "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "do", 
+                            0.03, 
+                            0.12
+                        ], 
+                        [
+                            "you", 
+                            0.12, 
+                            0.4
+                        ], 
+                        [
+                            "do", 
+                            0.4, 
+                            0.7
+                        ], 
+                        [
+                            "you", 
+                            0.7, 
+                            0.92
+                        ], 
+                        [
+                            "Love", 
+                            0.92, 
+                            1.31
+                        ], 
+                        [
+                            "Me", 
+                            1.31, 
+                            1.41
+                        ]
+                    ], 
+                    "transcript": "do you do you Love Me "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "do", 
+                            0.03, 
+                            0.12
+                        ], 
+                        [
+                            "you", 
+                            0.12, 
+                            0.4
+                        ], 
+                        [
+                            "do", 
+                            0.4, 
+                            0.7
+                        ], 
+                        [
+                            "you", 
+                            0.7, 
+                            0.92
+                        ], 
+                        [
+                            "Love", 
+                            0.92, 
+                            1.31
+                        ], 
+                        [
+                            "Me", 
+                            1.31, 
+                            1.64
+                        ]
+                    ], 
+                    "transcript": "do you do you Love Me "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "do", 
+                            0.03, 
+                            0.12
+                        ], 
+                        [
+                            "you", 
+                            0.12, 
+                            0.4
+                        ], 
+                        [
+                            "do", 
+                            0.4, 
+                            0.7
+                        ], 
+                        [
+                            "you", 
+                            0.7, 
+                            0.92
+                        ], 
+                        [
+                            "Love", 
+                            0.92, 
+                            1.31
+                        ], 
+                        [
+                            "Me", 
+                            1.31, 
+                            1.84
+                        ]
+                    ], 
+                    "transcript": "do you do you Love Me "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "confidence": 0.882, 
+                    "timestamps": [
+                        [
+                            "do", 
+                            0.03, 
+                            0.12
+                        ], 
+                        [
+                            "you", 
+                            0.12, 
+                            0.4
+                        ], 
+                        [
+                            "do", 
+                            0.4, 
+                            0.7
+                        ], 
+                        [
+                            "you", 
+                            0.7, 
+                            0.92
+                        ], 
+                        [
+                            "Love", 
+                            0.92, 
+                            1.31
+                        ], 
+                        [
+                            "Me", 
+                            1.31, 
+                            1.84
+                        ]
+                    ], 
+                    "transcript": "do you do you Love Me ", 
+                    "word_confidence": [
+                        [
+                            "do", 
+                            0.6411966933188977
+                        ], 
+                        [
+                            "you", 
+                            0.9280183610702244
+                        ], 
+                        [
+                            "do", 
+                            0.6654066642994872
+                        ], 
+                        [
+                            "you", 
+                            0.9801963345311545
+                        ], 
+                        [
+                            "Love", 
+                            0.956921428853013
+                        ], 
+                        [
+                            "Me", 
+                            0.9265398908186574
+                        ]
+                    ]
+                }, 
+                {
+                    "transcript": "do you into you Love Me "
+                }, 
+                {
+                    "transcript": "you you do you Love Me "
+                }
+            ], 
+            "final": true
+        }
+    ]
+}
