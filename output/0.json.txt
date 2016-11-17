@@ -6,22 +6,27 @@
                 {
                     "timestamps": [
                         [
-                            "do", 
-                            0.03, 
-                            0.12
+                            "so", 
+                            0.04, 
+                            0.22
                         ], 
                         [
-                            "you", 
-                            0.12, 
-                            0.4
+                            "what", 
+                            0.22, 
+                            0.41
                         ], 
                         [
-                            "do", 
-                            0.4, 
+                            "is", 
+                            0.41, 
+                            0.5
+                        ], 
+                        [
+                            "so", 
+                            0.5, 
                             0.65
                         ]
                     ], 
-                    "transcript": "do you do "
+                    "transcript": "so what is so "
                 }
             ], 
             "final": false
@@ -35,27 +40,32 @@
                 {
                     "timestamps": [
                         [
-                            "do", 
-                            0.03, 
-                            0.12
+                            "so", 
+                            0.04, 
+                            0.29
                         ], 
                         [
-                            "you", 
-                            0.12, 
+                            "it", 
+                            0.29, 
                             0.4
                         ], 
                         [
-                            "do", 
+                            "is", 
                             0.4, 
-                            0.7
+                            0.5
                         ], 
                         [
-                            "you", 
-                            0.7, 
+                            "sunny", 
+                            0.5, 
+                            0.79
+                        ], 
+                        [
+                            "day", 
+                            0.79, 
                             0.89
                         ]
                     ], 
-                    "transcript": "do you do you "
+                    "transcript": "so it is sunny day "
                 }
             ], 
             "final": false
@@ -69,27 +79,37 @@
                 {
                     "timestamps": [
                         [
-                            "do", 
-                            0.03, 
-                            0.12
+                            "so", 
+                            0.04, 
+                            0.29
                         ], 
                         [
-                            "you", 
-                            0.12, 
+                            "it", 
+                            0.29, 
                             0.4
                         ], 
                         [
-                            "do", 
+                            "is", 
                             0.4, 
-                            0.7
+                            0.5
                         ], 
                         [
-                            "you", 
-                            0.7, 
-                            1.01
+                            "sunny", 
+                            0.5, 
+                            0.79
+                        ], 
+                        [
+                            "day", 
+                            0.79, 
+                            0.94
+                        ], 
+                        [
+                            "in", 
+                            0.94, 
+                            1.15
                         ]
                     ], 
-                    "transcript": "do you do you "
+                    "transcript": "so it is sunny day in "
                 }
             ], 
             "final": false
@@ -103,37 +123,37 @@
                 {
                     "timestamps": [
                         [
-                            "do", 
-                            0.03, 
-                            0.12
+                            "so", 
+                            0.04, 
+                            0.29
                         ], 
                         [
-                            "you", 
-                            0.12, 
+                            "it", 
+                            0.29, 
                             0.4
                         ], 
                         [
-                            "do", 
+                            "is", 
                             0.4, 
-                            0.7
+                            0.5
                         ], 
                         [
-                            "you", 
-                            0.7, 
-                            0.92
+                            "sunny", 
+                            0.5, 
+                            0.79
                         ], 
                         [
-                            "Love", 
-                            0.92, 
-                            1.31
+                            "day", 
+                            0.79, 
+                            0.94
                         ], 
                         [
-                            "Me", 
-                            1.31, 
-                            1.41
+                            "indeed", 
+                            0.94, 
+                            1.38
                         ]
                     ], 
-                    "transcript": "do you do you Love Me "
+                    "transcript": "so it is sunny day indeed "
                 }
             ], 
             "final": false
@@ -147,37 +167,37 @@
                 {
                     "timestamps": [
                         [
-                            "do", 
-                            0.03, 
-                            0.12
+                            "so", 
+                            0.04, 
+                            0.29
                         ], 
                         [
-                            "you", 
-                            0.12, 
+                            "it", 
+                            0.29, 
                             0.4
                         ], 
                         [
-                            "do", 
+                            "is", 
                             0.4, 
-                            0.7
+                            0.5
                         ], 
                         [
-                            "you", 
-                            0.7, 
-                            0.92
+                            "sunny", 
+                            0.5, 
+                            0.79
                         ], 
                         [
-                            "Love", 
-                            0.92, 
-                            1.31
+                            "day", 
+                            0.79, 
+                            0.94
                         ], 
                         [
-                            "Me", 
-                            1.31, 
-                            1.64
+                            "indeed", 
+                            0.94, 
+                            1.39
                         ]
                     ], 
-                    "transcript": "do you do you Love Me "
+                    "transcript": "so it is sunny day indeed "
                 }
             ], 
             "final": false
@@ -189,116 +209,72 @@
         {
             "alternatives": [
                 {
+                    "confidence": 0.703, 
                     "timestamps": [
                         [
-                            "do", 
-                            0.03, 
-                            0.12
+                            "so", 
+                            0.04, 
+                            0.29
                         ], 
                         [
-                            "you", 
-                            0.12, 
+                            "it", 
+                            0.29, 
                             0.4
                         ], 
                         [
-                            "do", 
+                            "is", 
                             0.4, 
-                            0.7
+                            0.5
                         ], 
                         [
-                            "you", 
-                            0.7, 
-                            0.92
+                            "sunny", 
+                            0.5, 
+                            0.79
                         ], 
                         [
-                            "Love", 
-                            0.92, 
-                            1.31
+                            "day", 
+                            0.79, 
+                            0.94
                         ], 
                         [
-                            "Me", 
-                            1.31, 
-                            1.84
+                            "indeed", 
+                            0.94, 
+                            1.39
                         ]
                     ], 
-                    "transcript": "do you do you Love Me "
-                }
-            ], 
-            "final": false
-        }
-    ]
-}{
-    "result_index": 0, 
-    "results": [
-        {
-            "alternatives": [
-                {
-                    "confidence": 0.882, 
-                    "timestamps": [
-                        [
-                            "do", 
-                            0.03, 
-                            0.12
-                        ], 
-                        [
-                            "you", 
-                            0.12, 
-                            0.4
-                        ], 
-                        [
-                            "do", 
-                            0.4, 
-                            0.7
-                        ], 
-                        [
-                            "you", 
-                            0.7, 
-                            0.92
-                        ], 
-                        [
-                            "Love", 
-                            0.92, 
-                            1.31
-                        ], 
-                        [
-                            "Me", 
-                            1.31, 
-                            1.84
-                        ]
-                    ], 
-                    "transcript": "do you do you Love Me ", 
+                    "transcript": "so it is sunny day indeed ", 
                     "word_confidence": [
                         [
-                            "do", 
-                            0.6411966933188977
+                            "so", 
+                            0.7789908742304056
                         ], 
                         [
-                            "you", 
-                            0.9280183610702244
+                            "it", 
+                            0.27209727694658004
                         ], 
                         [
-                            "do", 
-                            0.6654066642994872
+                            "is", 
+                            0.7774324042605655
                         ], 
                         [
-                            "you", 
-                            0.9801963345311545
+                            "sunny", 
+                            0.501802810877996
                         ], 
                         [
-                            "Love", 
-                            0.956921428853013
+                            "day", 
+                            0.37914588456571247
                         ], 
                         [
-                            "Me", 
-                            0.9265398908186574
+                            "indeed", 
+                            0.9886739823364047
                         ]
                     ]
                 }, 
                 {
-                    "transcript": "do you into you Love Me "
+                    "transcript": "so what is sunny day indeed "
                 }, 
                 {
-                    "transcript": "you you do you Love Me "
+                    "transcript": "so what is funny to indeed "
                 }
             ], 
             "final": true

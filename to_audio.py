@@ -28,7 +28,7 @@ stream = p.open(format=FORMAT,
                 input=True,
                 frames_per_buffer=CHUNK)
 
-print("* recording")
+'''print("* recording")
 
 frames = []
 rel = RATE/CHUNK
@@ -53,7 +53,7 @@ wf.setnchannels(CHANNELS)
 wf.setsampwidth(p.get_sample_size(FORMAT))
 wf.setframerate(RATE)
 wf.writeframes(b''.join(frames))
-wf.close()
+wf.close()'''
 
 
 def listen_for_speech(threshold=THRESHOLD, num_phrases=-1):
@@ -86,7 +86,7 @@ def listen_for_speech(threshold=THRESHOLD, num_phrases=-1):
     response = []
 
     while (num_phrases == -1 or n > 0):
-        print n, num_phrases
+        #print n, num_phrases
         cur_data = stream.read(CHUNK)
         slid_win.append(math.sqrt(abs(audioop.avg(cur_data, 4))))
         #print slid_win[-1]
