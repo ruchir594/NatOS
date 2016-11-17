@@ -60,12 +60,14 @@ def gulp(f):
 listen = subprocess.Popen("python to_audio.py", shell=True)
 listen.wait()
 print "heard"
+
 ###############################################################################
 # --------- using IBM Watson to send output.wav file for voice - text ------- #
 ###############################################################################
 out = subprocess.Popen("python sttClient.py -credentials 446dda25-aa78-46ed-bc92-d1569008b46f:b56QwI2ofryB -model en-US_BroadbandModel", shell=True)
 out.wait()
 print "Processed though IBM Watson"
+
 ###############################################################################
 # -------- reading txt output of IBM JSON object ---------------------------- #
 ###############################################################################
@@ -74,16 +76,17 @@ f = f.read()
 f = gulp(f)
 j = json.loads(f)
 text = j['results'][0]['alternatives'][0]['transcript'] #best possible response
+
 ###############################################################################
 # ---------- Using Actions Architecture ------------------------------------- #
 # ---------- NLE -> NLU -> NLG using Actions Architecture ------------------- #
 # ---------- State and Elements to be managed by Actions Architecture ------- #
 # ---------- Receiving the best possible NLG -------------------------------- #
 ###############################################################################
-
+from ActionA.NLE.entities import ner
 ###############################################################################
 # using local python lib to convert text to voice
-# 
+#
 ###############################################################################
 import pyttsx
 engine = pyttsx.init()

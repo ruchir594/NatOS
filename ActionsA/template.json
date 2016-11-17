@@ -1,0 +1,12 @@
+{
+  "columns": [
+    ["unique id", "number"],
+    ["day", "string"],
+    ["time", "string"],
+    ["distance","array"],
+    ["location","string"],
+    ["music", "string"],
+    ["weather", "string"],
+    ["sex", "string"]
+  ]
+}
