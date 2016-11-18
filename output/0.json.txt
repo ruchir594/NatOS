@@ -6,27 +6,12 @@
                 {
                     "timestamps": [
                         [
-                            "so", 
-                            0.04, 
-                            0.22
-                        ], 
-                        [
-                            "what", 
-                            0.22, 
-                            0.41
-                        ], 
-                        [
-                            "is", 
-                            0.41, 
-                            0.5
-                        ], 
-                        [
-                            "so", 
-                            0.5, 
-                            0.65
+                            "%HESITATION", 
+                            0.03, 
+                            0.62
                         ]
                     ], 
-                    "transcript": "so what is so "
+                    "transcript": "%HESITATION "
                 }
             ], 
             "final": false
@@ -40,32 +25,17 @@
                 {
                     "timestamps": [
                         [
-                            "so", 
-                            0.04, 
-                            0.29
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
                         ], 
                         [
-                            "it", 
-                            0.29, 
-                            0.4
-                        ], 
-                        [
-                            "is", 
-                            0.4, 
-                            0.5
-                        ], 
-                        [
-                            "sunny", 
-                            0.5, 
-                            0.79
-                        ], 
-                        [
-                            "day", 
-                            0.79, 
+                            "how", 
+                            0.66, 
                             0.89
                         ]
                     ], 
-                    "transcript": "so it is sunny day "
+                    "transcript": "%HESITATION how "
                 }
             ], 
             "final": false
@@ -79,37 +49,27 @@
                 {
                     "timestamps": [
                         [
-                            "so", 
-                            0.04, 
-                            0.29
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
                         ], 
                         [
-                            "it", 
-                            0.29, 
-                            0.4
+                            "how", 
+                            0.66, 
+                            0.89
                         ], 
                         [
-                            "is", 
-                            0.4, 
-                            0.5
+                            "are", 
+                            0.89, 
+                            1.03
                         ], 
                         [
-                            "sunny", 
-                            0.5, 
-                            0.79
-                        ], 
-                        [
-                            "day", 
-                            0.79, 
-                            0.94
-                        ], 
-                        [
-                            "in", 
-                            0.94, 
+                            "you", 
+                            1.03, 
                             1.15
                         ]
                     ], 
-                    "transcript": "so it is sunny day in "
+                    "transcript": "%HESITATION how are you "
                 }
             ], 
             "final": false
@@ -123,37 +83,32 @@
                 {
                     "timestamps": [
                         [
-                            "so", 
-                            0.04, 
-                            0.29
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
                         ], 
                         [
-                            "it", 
-                            0.29, 
-                            0.4
+                            "how", 
+                            0.66, 
+                            0.89
                         ], 
                         [
-                            "is", 
-                            0.4, 
-                            0.5
+                            "are", 
+                            0.89, 
+                            1.03
                         ], 
                         [
-                            "sunny", 
-                            0.5, 
-                            0.79
+                            "you", 
+                            1.03, 
+                            1.11
                         ], 
                         [
-                            "day", 
-                            0.79, 
-                            0.94
-                        ], 
-                        [
-                            "indeed", 
-                            0.94, 
-                            1.38
+                            "doing", 
+                            1.11, 
+                            1.41
                         ]
                     ], 
-                    "transcript": "so it is sunny day indeed "
+                    "transcript": "%HESITATION how are you doing "
                 }
             ], 
             "final": false
@@ -167,37 +122,32 @@
                 {
                     "timestamps": [
                         [
-                            "so", 
-                            0.04, 
-                            0.29
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
                         ], 
                         [
-                            "it", 
-                            0.29, 
-                            0.4
+                            "how", 
+                            0.66, 
+                            0.89
                         ], 
                         [
-                            "is", 
-                            0.4, 
-                            0.5
+                            "are", 
+                            0.89, 
+                            1.03
                         ], 
                         [
-                            "sunny", 
-                            0.5, 
-                            0.79
+                            "you", 
+                            1.03, 
+                            1.11
                         ], 
                         [
-                            "day", 
-                            0.79, 
-                            0.94
-                        ], 
-                        [
-                            "indeed", 
-                            0.94, 
-                            1.39
+                            "doing", 
+                            1.11, 
+                            1.67
                         ]
                     ], 
-                    "transcript": "so it is sunny day indeed "
+                    "transcript": "%HESITATION how are you doing "
                 }
             ], 
             "final": false
@@ -209,72 +159,618 @@
         {
             "alternatives": [
                 {
-                    "confidence": 0.703, 
                     "timestamps": [
                         [
-                            "so", 
-                            0.04, 
-                            0.29
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
                         ], 
                         [
-                            "it", 
-                            0.29, 
-                            0.4
+                            "how", 
+                            0.66, 
+                            0.89
                         ], 
                         [
-                            "is", 
-                            0.4, 
-                            0.5
+                            "are", 
+                            0.89, 
+                            1.03
                         ], 
                         [
-                            "sunny", 
-                            0.5, 
-                            0.79
+                            "you", 
+                            1.03, 
+                            1.11
                         ], 
                         [
-                            "day", 
-                            0.79, 
-                            0.94
-                        ], 
-                        [
-                            "indeed", 
-                            0.94, 
-                            1.39
+                            "doing", 
+                            1.11, 
+                            1.88
                         ]
                     ], 
-                    "transcript": "so it is sunny day indeed ", 
+                    "transcript": "%HESITATION how are you doing "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
+                        ], 
+                        [
+                            "how", 
+                            0.66, 
+                            0.89
+                        ], 
+                        [
+                            "are", 
+                            0.89, 
+                            1.03
+                        ], 
+                        [
+                            "you", 
+                            1.03, 
+                            1.11
+                        ], 
+                        [
+                            "doing", 
+                            1.11, 
+                            1.88
+                        ], 
+                        [
+                            "I", 
+                            2.14, 
+                            2.43
+                        ]
+                    ], 
+                    "transcript": "%HESITATION how are you doing I "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
+                        ], 
+                        [
+                            "how", 
+                            0.66, 
+                            0.89
+                        ], 
+                        [
+                            "are", 
+                            0.89, 
+                            1.03
+                        ], 
+                        [
+                            "you", 
+                            1.03, 
+                            1.11
+                        ], 
+                        [
+                            "doing", 
+                            1.11, 
+                            1.88
+                        ], 
+                        [
+                            "I", 
+                            2.14, 
+                            2.34
+                        ], 
+                        [
+                            "hope", 
+                            2.34, 
+                            2.59
+                        ], 
+                        [
+                            "you", 
+                            2.59, 
+                            2.69
+                        ]
+                    ], 
+                    "transcript": "%HESITATION how are you doing I hope you "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
+                        ], 
+                        [
+                            "how", 
+                            0.66, 
+                            0.89
+                        ], 
+                        [
+                            "are", 
+                            0.89, 
+                            1.03
+                        ], 
+                        [
+                            "you", 
+                            1.03, 
+                            1.11
+                        ], 
+                        [
+                            "doing", 
+                            1.11, 
+                            1.88
+                        ], 
+                        [
+                            "I", 
+                            2.14, 
+                            2.34
+                        ], 
+                        [
+                            "hope", 
+                            2.34, 
+                            2.59
+                        ], 
+                        [
+                            "you", 
+                            2.59, 
+                            2.7
+                        ], 
+                        [
+                            "have", 
+                            2.7, 
+                            2.89
+                        ], 
+                        [
+                            "a", 
+                            2.89, 
+                            2.95
+                        ]
+                    ], 
+                    "transcript": "%HESITATION how are you doing I hope you have a "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
+                        ], 
+                        [
+                            "how", 
+                            0.66, 
+                            0.89
+                        ], 
+                        [
+                            "are", 
+                            0.89, 
+                            1.03
+                        ], 
+                        [
+                            "you", 
+                            1.03, 
+                            1.11
+                        ], 
+                        [
+                            "doing", 
+                            1.11, 
+                            1.88
+                        ], 
+                        [
+                            "I", 
+                            2.14, 
+                            2.34
+                        ], 
+                        [
+                            "hope", 
+                            2.34, 
+                            2.59
+                        ], 
+                        [
+                            "you", 
+                            2.59, 
+                            2.7
+                        ], 
+                        [
+                            "have", 
+                            2.7, 
+                            2.89
+                        ], 
+                        [
+                            "a", 
+                            2.89, 
+                            2.94
+                        ], 
+                        [
+                            "good", 
+                            2.94, 
+                            3.19
+                        ]
+                    ], 
+                    "transcript": "%HESITATION how are you doing I hope you have a good "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
+                        ], 
+                        [
+                            "how", 
+                            0.66, 
+                            0.89
+                        ], 
+                        [
+                            "are", 
+                            0.89, 
+                            1.03
+                        ], 
+                        [
+                            "you", 
+                            1.03, 
+                            1.11
+                        ], 
+                        [
+                            "doing", 
+                            1.11, 
+                            1.88
+                        ], 
+                        [
+                            "I", 
+                            2.14, 
+                            2.34
+                        ], 
+                        [
+                            "hope", 
+                            2.34, 
+                            2.59
+                        ], 
+                        [
+                            "you", 
+                            2.59, 
+                            2.7
+                        ], 
+                        [
+                            "have", 
+                            2.7, 
+                            2.89
+                        ], 
+                        [
+                            "a", 
+                            2.89, 
+                            2.94
+                        ], 
+                        [
+                            "good", 
+                            2.94, 
+                            3.19
+                        ], 
+                        [
+                            "moral", 
+                            3.19, 
+                            3.45
+                        ]
+                    ], 
+                    "transcript": "%HESITATION how are you doing I hope you have a good moral "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
+                        ], 
+                        [
+                            "how", 
+                            0.66, 
+                            0.89
+                        ], 
+                        [
+                            "are", 
+                            0.89, 
+                            1.03
+                        ], 
+                        [
+                            "you", 
+                            1.03, 
+                            1.11
+                        ], 
+                        [
+                            "doing", 
+                            1.11, 
+                            1.88
+                        ], 
+                        [
+                            "I", 
+                            2.14, 
+                            2.34
+                        ], 
+                        [
+                            "hope", 
+                            2.34, 
+                            2.59
+                        ], 
+                        [
+                            "you", 
+                            2.59, 
+                            2.7
+                        ], 
+                        [
+                            "had", 
+                            2.7, 
+                            2.89
+                        ], 
+                        [
+                            "a", 
+                            2.89, 
+                            2.94
+                        ], 
+                        [
+                            "good", 
+                            2.94, 
+                            3.19
+                        ], 
+                        [
+                            "morning", 
+                            3.19, 
+                            3.71
+                        ]
+                    ], 
+                    "transcript": "%HESITATION how are you doing I hope you had a good morning "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "timestamps": [
+                        [
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
+                        ], 
+                        [
+                            "how", 
+                            0.66, 
+                            0.89
+                        ], 
+                        [
+                            "are", 
+                            0.89, 
+                            1.03
+                        ], 
+                        [
+                            "you", 
+                            1.03, 
+                            1.11
+                        ], 
+                        [
+                            "doing", 
+                            1.11, 
+                            1.88
+                        ], 
+                        [
+                            "I", 
+                            2.14, 
+                            2.34
+                        ], 
+                        [
+                            "hope", 
+                            2.34, 
+                            2.59
+                        ], 
+                        [
+                            "you", 
+                            2.59, 
+                            2.7
+                        ], 
+                        [
+                            "had", 
+                            2.7, 
+                            2.89
+                        ], 
+                        [
+                            "a", 
+                            2.89, 
+                            2.94
+                        ], 
+                        [
+                            "good", 
+                            2.94, 
+                            3.19
+                        ], 
+                        [
+                            "morning", 
+                            3.19, 
+                            3.81
+                        ]
+                    ], 
+                    "transcript": "%HESITATION how are you doing I hope you had a good morning "
+                }
+            ], 
+            "final": false
+        }
+    ]
+}{
+    "result_index": 0, 
+    "results": [
+        {
+            "alternatives": [
+                {
+                    "confidence": 0.948, 
+                    "timestamps": [
+                        [
+                            "%HESITATION", 
+                            0.03, 
+                            0.63
+                        ], 
+                        [
+                            "how", 
+                            0.66, 
+                            0.89
+                        ], 
+                        [
+                            "are", 
+                            0.89, 
+                            1.03
+                        ], 
+                        [
+                            "you", 
+                            1.03, 
+                            1.11
+                        ], 
+                        [
+                            "doing", 
+                            1.11, 
+                            1.88
+                        ], 
+                        [
+                            "I", 
+                            2.14, 
+                            2.34
+                        ], 
+                        [
+                            "hope", 
+                            2.34, 
+                            2.59
+                        ], 
+                        [
+                            "you", 
+                            2.59, 
+                            2.7
+                        ], 
+                        [
+                            "had", 
+                            2.7, 
+                            2.89
+                        ], 
+                        [
+                            "a", 
+                            2.89, 
+                            2.94
+                        ], 
+                        [
+                            "good", 
+                            2.94, 
+                            3.19
+                        ], 
+                        [
+                            "morning", 
+                            3.19, 
+                            3.81
+                        ]
+                    ], 
+                    "transcript": "%HESITATION how are you doing I hope you had a good morning ", 
                     "word_confidence": [
                         [
-                            "so", 
-                            0.7789908742304056
+                            "%HESITATION", 
+                            0.9999999999999798
                         ], 
                         [
-                            "it", 
-                            0.27209727694658004
+                            "how", 
+                            0.9999999999999958
                         ], 
                         [
-                            "is", 
-                            0.7774324042605655
+                            "are", 
+                            0.9999999999999964
                         ], 
                         [
-                            "sunny", 
-                            0.501802810877996
+                            "you", 
+                            0.8159825635126089
                         ], 
                         [
-                            "day", 
-                            0.37914588456571247
+                            "doing", 
+                            0.9945430385639116
                         ], 
                         [
-                            "indeed", 
-                            0.9886739823364047
+                            "I", 
+                            0.859128010505031
+                        ], 
+                        [
+                            "hope", 
+                            0.9943651204202081
+                        ], 
+                        [
+                            "you", 
+                            0.8080606019638488
+                        ], 
+                        [
+                            "had", 
+                            0.47443290183606013
+                        ], 
+                        [
+                            "a", 
+                            1.0
+                        ], 
+                        [
+                            "good", 
+                            0.9999999999999958
+                        ], 
+                        [
+                            "morning", 
+                            0.9792683869097163
                         ]
                     ]
                 }, 
                 {
-                    "transcript": "so what is sunny day indeed "
+                    "transcript": "%HESITATION how are you doing I hope you have a good morning "
                 }, 
                 {
-                    "transcript": "so what is funny to indeed "
+                    "transcript": "oh how are you doing I hope you had a good morning "
                 }
             ], 
             "final": true
