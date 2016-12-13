@@ -96,3 +96,5 @@ engine = pyttsx.init()
 #engine.say('Sally sells seashells by the seashore.')
 engine.say(text)
 engine.runAndWait()
+
+# Alexa integration
