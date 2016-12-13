@@ -6,231 +6,27 @@
                 {
                     "timestamps": [
                         [
-                            "%HESITATION", 
+                            "I", 
                             0.03, 
-                            0.62
-                        ]
-                    ], 
-                    "transcript": "%HESITATION "
-                }
-            ], 
-            "final": false
-        }
-    ]
-}{
-    "result_index": 0, 
-    "results": [
-        {
-            "alternatives": [
-                {
-                    "timestamps": [
-                        [
-                            "%HESITATION", 
-                            0.03, 
-                            0.63
+                            0.07
                         ], 
                         [
-                            "how", 
-                            0.66, 
-                            0.89
-                        ]
-                    ], 
-                    "transcript": "%HESITATION how "
-                }
-            ], 
-            "final": false
-        }
-    ]
-}{
-    "result_index": 0, 
-    "results": [
-        {
-            "alternatives": [
-                {
-                    "timestamps": [
-                        [
-                            "%HESITATION", 
-                            0.03, 
-                            0.63
-                        ], 
-                        [
-                            "how", 
-                            0.66, 
-                            0.89
-                        ], 
-                        [
-                            "are", 
-                            0.89, 
-                            1.03
-                        ], 
-                        [
-                            "you", 
-                            1.03, 
-                            1.15
-                        ]
-                    ], 
-                    "transcript": "%HESITATION how are you "
-                }
-            ], 
-            "final": false
-        }
-    ]
-}{
-    "result_index": 0, 
-    "results": [
-        {
-            "alternatives": [
-                {
-                    "timestamps": [
-                        [
-                            "%HESITATION", 
-                            0.03, 
-                            0.63
-                        ], 
-                        [
-                            "how", 
-                            0.66, 
-                            0.89
-                        ], 
-                        [
-                            "are", 
-                            0.89, 
-                            1.03
-                        ], 
-                        [
-                            "you", 
-                            1.03, 
-                            1.11
-                        ], 
-                        [
-                            "doing", 
-                            1.11, 
-                            1.41
-                        ]
-                    ], 
-                    "transcript": "%HESITATION how are you doing "
-                }
-            ], 
-            "final": false
-        }
-    ]
-}{
-    "result_index": 0, 
-    "results": [
-        {
-            "alternatives": [
-                {
-                    "timestamps": [
-                        [
-                            "%HESITATION", 
-                            0.03, 
-                            0.63
-                        ], 
-                        [
-                            "how", 
-                            0.66, 
-                            0.89
-                        ], 
-                        [
-                            "are", 
-                            0.89, 
-                            1.03
-                        ], 
-                        [
-                            "you", 
-                            1.03, 
-                            1.11
-                        ], 
-                        [
-                            "doing", 
-                            1.11, 
-                            1.67
-                        ]
-                    ], 
-                    "transcript": "%HESITATION how are you doing "
-                }
-            ], 
-            "final": false
-        }
-    ]
-}{
-    "result_index": 0, 
-    "results": [
-        {
-            "alternatives": [
-                {
-                    "timestamps": [
-                        [
-                            "%HESITATION", 
-                            0.03, 
-                            0.63
-                        ], 
-                        [
-                            "how", 
-                            0.66, 
-                            0.89
-                        ], 
-                        [
-                            "are", 
-                            0.89, 
-                            1.03
-                        ], 
-                        [
-                            "you", 
-                            1.03, 
-                            1.11
-                        ], 
-                        [
-                            "doing", 
-                            1.11, 
-                            1.88
-                        ]
-                    ], 
-                    "transcript": "%HESITATION how are you doing "
-                }
-            ], 
-            "final": false
-        }
-    ]
-}{
-    "result_index": 0, 
-    "results": [
-        {
-            "alternatives": [
-                {
-                    "timestamps": [
-                        [
-                            "%HESITATION", 
-                            0.03, 
-                            0.63
-                        ], 
-                        [
-                            "how", 
-                            0.66, 
-                            0.89
-                        ], 
-                        [
-                            "are", 
-                            0.89, 
-                            1.03
-                        ], 
-                        [
-                            "you", 
-                            1.03, 
-                            1.11
-                        ], 
-                        [
-                            "doing", 
-                            1.11, 
-                            1.88
+                            "know", 
+                            0.07, 
+                            0.26
                         ], 
                         [
                             "I", 
-                            2.14, 
-                            2.43
+                            0.26, 
+                            0.4
+                        ], 
+                        [
+                            "know", 
+                            0.4, 
+                            0.65
                         ]
                     ], 
-                    "transcript": "%HESITATION how are you doing I "
+                    "transcript": "I know I know "
                 }
             ], 
             "final": false
@@ -244,47 +40,27 @@
                 {
                     "timestamps": [
                         [
-                            "%HESITATION", 
+                            "I", 
                             0.03, 
-                            0.63
+                            0.07
                         ], 
                         [
-                            "how", 
-                            0.66, 
-                            0.89
-                        ], 
-                        [
-                            "are", 
-                            0.89, 
-                            1.03
-                        ], 
-                        [
-                            "you", 
-                            1.03, 
-                            1.11
-                        ], 
-                        [
-                            "doing", 
-                            1.11, 
-                            1.88
+                            "know", 
+                            0.07, 
+                            0.26
                         ], 
                         [
                             "I", 
-                            2.14, 
-                            2.34
+                            0.26, 
+                            0.4
                         ], 
                         [
-                            "hope", 
-                            2.34, 
-                            2.59
-                        ], 
-                        [
-                            "you", 
-                            2.59, 
-                            2.69
+                            "know", 
+                            0.4, 
+                            0.7
                         ]
                     ], 
-                    "transcript": "%HESITATION how are you doing I hope you "
+                    "transcript": "I know I know "
                 }
             ], 
             "final": false
@@ -298,57 +74,27 @@
                 {
                     "timestamps": [
                         [
-                            "%HESITATION", 
+                            "and", 
                             0.03, 
-                            0.63
+                            0.16
                         ], 
                         [
-                            "how", 
-                            0.66, 
-                            0.89
+                            "all", 
+                            0.16, 
+                            0.31
                         ], 
                         [
-                            "are", 
-                            0.89, 
-                            1.03
+                            "the", 
+                            0.31, 
+                            0.4
                         ], 
                         [
-                            "you", 
-                            1.03, 
-                            1.11
-                        ], 
-                        [
-                            "doing", 
-                            1.11, 
-                            1.88
-                        ], 
-                        [
-                            "I", 
-                            2.14, 
-                            2.34
-                        ], 
-                        [
-                            "hope", 
-                            2.34, 
-                            2.59
-                        ], 
-                        [
-                            "you", 
-                            2.59, 
-                            2.7
-                        ], 
-                        [
-                            "have", 
-                            2.7, 
-                            2.89
-                        ], 
-                        [
-                            "a", 
-                            2.89, 
-                            2.95
+                            "other", 
+                            0.4, 
+                            1.17
                         ]
                     ], 
-                    "transcript": "%HESITATION how are you doing I hope you have a "
+                    "transcript": "and all the other "
                 }
             ], 
             "final": false
@@ -362,62 +108,32 @@
                 {
                     "timestamps": [
                         [
-                            "%HESITATION", 
+                            "and", 
                             0.03, 
-                            0.63
+                            0.16
                         ], 
                         [
-                            "how", 
-                            0.66, 
-                            0.89
+                            "all", 
+                            0.16, 
+                            0.31
                         ], 
                         [
-                            "are", 
-                            0.89, 
+                            "the", 
+                            0.31, 
+                            0.4
+                        ], 
+                        [
+                            "other", 
+                            0.4, 
                             1.03
                         ], 
                         [
-                            "you", 
+                            "little", 
                             1.03, 
-                            1.11
-                        ], 
-                        [
-                            "doing", 
-                            1.11, 
-                            1.88
-                        ], 
-                        [
-                            "I", 
-                            2.14, 
-                            2.34
-                        ], 
-                        [
-                            "hope", 
-                            2.34, 
-                            2.59
-                        ], 
-                        [
-                            "you", 
-                            2.59, 
-                            2.7
-                        ], 
-                        [
-                            "have", 
-                            2.7, 
-                            2.89
-                        ], 
-                        [
-                            "a", 
-                            2.89, 
-                            2.94
-                        ], 
-                        [
-                            "good", 
-                            2.94, 
-                            3.19
+                            1.33
                         ]
                     ], 
-                    "transcript": "%HESITATION how are you doing I hope you have a good "
+                    "transcript": "and all the other little "
                 }
             ], 
             "final": false
@@ -429,348 +145,63 @@
         {
             "alternatives": [
                 {
+                    "confidence": 0.172, 
                     "timestamps": [
                         [
-                            "%HESITATION", 
+                            "and", 
                             0.03, 
-                            0.63
+                            0.16
                         ], 
                         [
-                            "how", 
-                            0.66, 
-                            0.89
+                            "all", 
+                            0.16, 
+                            0.31
                         ], 
                         [
-                            "are", 
-                            0.89, 
+                            "the", 
+                            0.31, 
+                            0.4
+                        ], 
+                        [
+                            "other", 
+                            0.4, 
                             1.03
                         ], 
                         [
-                            "you", 
+                            "little", 
                             1.03, 
-                            1.11
-                        ], 
-                        [
-                            "doing", 
-                            1.11, 
-                            1.88
-                        ], 
-                        [
-                            "I", 
-                            2.14, 
-                            2.34
-                        ], 
-                        [
-                            "hope", 
-                            2.34, 
-                            2.59
-                        ], 
-                        [
-                            "you", 
-                            2.59, 
-                            2.7
-                        ], 
-                        [
-                            "have", 
-                            2.7, 
-                            2.89
-                        ], 
-                        [
-                            "a", 
-                            2.89, 
-                            2.94
-                        ], 
-                        [
-                            "good", 
-                            2.94, 
-                            3.19
-                        ], 
-                        [
-                            "moral", 
-                            3.19, 
-                            3.45
+                            1.33
                         ]
                     ], 
-                    "transcript": "%HESITATION how are you doing I hope you have a good moral "
-                }
-            ], 
-            "final": false
-        }
-    ]
-}{
-    "result_index": 0, 
-    "results": [
-        {
-            "alternatives": [
-                {
-                    "timestamps": [
-                        [
-                            "%HESITATION", 
-                            0.03, 
-                            0.63
-                        ], 
-                        [
-                            "how", 
-                            0.66, 
-                            0.89
-                        ], 
-                        [
-                            "are", 
-                            0.89, 
-                            1.03
-                        ], 
-                        [
-                            "you", 
-                            1.03, 
-                            1.11
-                        ], 
-                        [
-                            "doing", 
-                            1.11, 
-                            1.88
-                        ], 
-                        [
-                            "I", 
-                            2.14, 
-                            2.34
-                        ], 
-                        [
-                            "hope", 
-                            2.34, 
-                            2.59
-                        ], 
-                        [
-                            "you", 
-                            2.59, 
-                            2.7
-                        ], 
-                        [
-                            "had", 
-                            2.7, 
-                            2.89
-                        ], 
-                        [
-                            "a", 
-                            2.89, 
-                            2.94
-                        ], 
-                        [
-                            "good", 
-                            2.94, 
-                            3.19
-                        ], 
-                        [
-                            "morning", 
-                            3.19, 
-                            3.71
-                        ]
-                    ], 
-                    "transcript": "%HESITATION how are you doing I hope you had a good morning "
-                }
-            ], 
-            "final": false
-        }
-    ]
-}{
-    "result_index": 0, 
-    "results": [
-        {
-            "alternatives": [
-                {
-                    "timestamps": [
-                        [
-                            "%HESITATION", 
-                            0.03, 
-                            0.63
-                        ], 
-                        [
-                            "how", 
-                            0.66, 
-                            0.89
-                        ], 
-                        [
-                            "are", 
-                            0.89, 
-                            1.03
-                        ], 
-                        [
-                            "you", 
-                            1.03, 
-                            1.11
-                        ], 
-                        [
-                            "doing", 
-                            1.11, 
-                            1.88
-                        ], 
-                        [
-                            "I", 
-                            2.14, 
-                            2.34
-                        ], 
-                        [
-                            "hope", 
-                            2.34, 
-                            2.59
-                        ], 
-                        [
-                            "you", 
-                            2.59, 
-                            2.7
-                        ], 
-                        [
-                            "had", 
-                            2.7, 
-                            2.89
-                        ], 
-                        [
-                            "a", 
-                            2.89, 
-                            2.94
-                        ], 
-                        [
-                            "good", 
-                            2.94, 
-                            3.19
-                        ], 
-                        [
-                            "morning", 
-                            3.19, 
-                            3.81
-                        ]
-                    ], 
-                    "transcript": "%HESITATION how are you doing I hope you had a good morning "
-                }
-            ], 
-            "final": false
-        }
-    ]
-}{
-    "result_index": 0, 
-    "results": [
-        {
-            "alternatives": [
-                {
-                    "confidence": 0.948, 
-                    "timestamps": [
-                        [
-                            "%HESITATION", 
-                            0.03, 
-                            0.63
-                        ], 
-                        [
-                            "how", 
-                            0.66, 
-                            0.89
-                        ], 
-                        [
-                            "are", 
-                            0.89, 
-                            1.03
-                        ], 
-                        [
-                            "you", 
-                            1.03, 
-                            1.11
-                        ], 
-                        [
-                            "doing", 
-                            1.11, 
-                            1.88
-                        ], 
-                        [
-                            "I", 
-                            2.14, 
-                            2.34
-                        ], 
-                        [
-                            "hope", 
-                            2.34, 
-                            2.59
-                        ], 
-                        [
-                            "you", 
-                            2.59, 
-                            2.7
-                        ], 
-                        [
-                            "had", 
-                            2.7, 
-                            2.89
-                        ], 
-                        [
-                            "a", 
-                            2.89, 
-                            2.94
-                        ], 
-                        [
-                            "good", 
-                            2.94, 
-                            3.19
-                        ], 
-                        [
-                            "morning", 
-                            3.19, 
-                            3.81
-                        ]
-                    ], 
-                    "transcript": "%HESITATION how are you doing I hope you had a good morning ", 
+                    "transcript": "and all the other little ", 
                     "word_confidence": [
                         [
-                            "%HESITATION", 
-                            0.9999999999999798
+                            "and", 
+                            0.1664403999689085
                         ], 
                         [
-                            "how", 
-                            0.9999999999999958
+                            "all", 
+                            0.08525908149783355
                         ], 
                         [
-                            "are", 
-                            0.9999999999999964
+                            "the", 
+                            0.21437719196506688
                         ], 
                         [
-                            "you", 
-                            0.8159825635126089
+                            "other", 
+                            0.2565506140629446
                         ], 
                         [
-                            "doing", 
-                            0.9945430385639116
-                        ], 
-                        [
-                            "I", 
-                            0.859128010505031
-                        ], 
-                        [
-                            "hope", 
-                            0.9943651204202081
-                        ], 
-                        [
-                            "you", 
-                            0.8080606019638488
-                        ], 
-                        [
-                            "had", 
-                            0.47443290183606013
-                        ], 
-                        [
-                            "a", 
-                            1.0
-                        ], 
-                        [
-                            "good", 
-                            0.9999999999999958
-                        ], 
-                        [
-                            "morning", 
-                            0.9792683869097163
+                            "little", 
+                            0.027871488679123823
                         ]
                     ]
                 }, 
                 {
-                    "transcript": "%HESITATION how are you doing I hope you have a good morning "
+                    "transcript": "and all the other "
                 }, 
                 {
-                    "transcript": "oh how are you doing I hope you had a good morning "
+                    "transcript": "I know I know I know "
                 }
             ], 
             "final": true
