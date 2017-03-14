@@ -16,7 +16,7 @@ speech = LiveSpeech(
 )
 config = {
     'verbose':False,
-    'audio_file': './output2.wav',
+    'audio_file': './output1.wav',
     'buffer_size':2048,
     'no_search':False,
     'full_utt':False,
