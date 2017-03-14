@@ -1,7 +1,8 @@
-'''import os
-from pocketsphinx import LiveSpeech, get_model_path
+import os
+from pocketsphinx import LiveSpeech, get_model_path, AudioFile, get_data_path
 
 model_path = get_model_path()
+data_path = get_data_path()
 
 speech = LiveSpeech(
     verbose=False,
@@ -13,12 +14,23 @@ speech = LiveSpeech(
     lm=os.path.join(model_path, 'en-us.lm.bin'),
     dic=os.path.join(model_path, 'cmudict-en-us.dict')
 )
+config = {
+    'verbose':False,
+    'audio_file': './output2.wav',
+    'buffer_size':2048,
+    'no_search':False,
+    'full_utt':False,
+    'hmm':os.path.join(model_path, 'en-us'),
+    'lm':os.path.join(model_path, 'en-us.lm.bin'),
+    'dic':os.path.join(model_path, 'cmudict-en-us.dict')
+}
 
-for phrase in speech:
+audio = AudioFile(**config)
+for phrase in audio:
     print(phrase)
     print(phrase.segments(detailed=True))
     print(phrase.best(count=10))
-    print('~~~~~~~~~~~~~~')'''
+    print('~~~~~~~~~~~~~~')
 
 '''
 curl -X POST -u 446dda25-aa78-46ed-bc92-d1569008b46f:b56QwI2ofryB --header "Content-Type: audio/wav" --header "Transfer-Encoding: chunked" --data-binary @/recordings/0001.wav "https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?continuous=true"
@@ -26,7 +38,7 @@ curl -u 446dda25-aa78-46ed-bc92-d1569008b46f:b56QwI2ofryB  "https://stream.watso
 python ./sttClient.py -credentials 446dda25-aa78-46ed-bc92-d1569008b46f:b56QwI2ofryB -model en-US_BroadbandModel
 '''
 
-import subprocess
+'''import subprocess
 import json
 ###############################################################################
 # Gulp (multiple JSON object { ..{1}. }{ ..{2}. }{ ..{3}. } )
@@ -83,10 +95,10 @@ text = j['results'][0]['alternatives'][0]['transcript'] #best possible response
 # ---------- State and Elements to be managed by Actions Architecture ------- #
 # ---------- Receiving the best possible NLG -------------------------------- #
 ###############################################################################
-'''text = "good morning, it is a lovely day today. buy pizza at 6 PM tomorrow?"
-from ActionsA.nle.entities import ner_primitive
-ayrton = ner_primitive(text)
-print ayrton.view()'''
+#text = "good morning, it is a lovely day today. buy pizza at 6 PM tomorrow?"
+#from ActionsA.nle.entities import ner_primitive
+#ayrton = ner_primitive(text)
+#print ayrton.view()
 ###############################################################################
 # using local python lib to convert text to voice
 #
@@ -95,6 +107,6 @@ import pyttsx
 engine = pyttsx.init()
 #engine.say('Sally sells seashells by the seashore.')
 engine.say(text)
-engine.runAndWait()
+engine.runAndWait()'''
 
 # Alexa integration
