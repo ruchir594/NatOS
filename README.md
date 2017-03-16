@@ -2,6 +2,8 @@
 
 ### Commands it can understand
 
-> Hey Nat, <Greetings>
+> Hey Nat, --Greetings--
+
 > What time is it?
+
 > Hows the weather?
