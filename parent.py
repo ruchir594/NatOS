@@ -4,11 +4,19 @@
 # perform commands, waits till returned, and listens again
 # ------------------------------------------------------------------------------
 
-import subprocess, io, json
+import subprocess, io, json, csv, time
 import speech_recognition as sr
 from gtts import gTTS
 from core import nlqueen
 import pygame
+
+def push_in_csv(req, res, uid):
+    timestamp = int(round(time.time() * 1000))
+    date = time.strftime("%m/%d/%Y")
+    with open('logs/logs.csv', 'a') as csvfile:
+        fieldnames = ['uid', 'req', 'res', 'timestamp', 'date']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writerow({'uid': uid, 'req': req, 'res': res, 'timestamp': timestamp, 'date': date})
 
 
 def mothercall():
@@ -35,6 +43,7 @@ def mothercall():
         ret = "Could not request results from Microsoft Bing Voice Recognition service; Check internet?"
     if ret=='':
         ret = nlqueen.extract(res['header']['lexical'])
+        push_in_csv(res['header']['lexical'], ret, 101) # -------- logging in
     # --------- using Google to convert text-to-speech
     print 'text-to-speech... '
     tts = gTTS(text=ret, lang='en')
@@ -45,5 +54,6 @@ def mothercall():
     pygame.mixer.music.play()
     while pygame.mixer.music.get_busy() == True:
         continue
+
 
 mothercall()
