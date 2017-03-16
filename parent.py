@@ -48,7 +48,6 @@ def mothercall():
     print 'text-to-speech... '
     tts = gTTS(text=ret, lang='en')
     tts.save('ret.mp3')
-    print 'Executing mp3'
     pygame.mixer.init()
     pygame.mixer.music.load('ret.mp3')
     pygame.mixer.music.play()
