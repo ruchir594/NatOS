@@ -1,112 +1,49 @@
-import os
-from pocketsphinx import LiveSpeech, get_model_path, AudioFile, get_data_path
+# ------------------------------------------------------------------------------
+# this file should be the only file that needs to be executed.
+# it will listen to mike, convert speech to audio, to text, extract intents,
+# perform commands, waits till returned, and listens again
+# ------------------------------------------------------------------------------
 
-model_path = get_model_path()
-data_path = get_data_path()
+import subprocess, io, json
+import speech_recognition as sr
+from gtts import gTTS
+from core import nlqueen
+import pygame
 
-speech = LiveSpeech(
-    verbose=False,
-    sampling_rate=16000,
-    buffer_size=2048,
-    no_search=False,
-    full_utt=False,
-    hmm=os.path.join(model_path, 'en-us'),
-    lm=os.path.join(model_path, 'en-us.lm.bin'),
-    dic=os.path.join(model_path, 'cmudict-en-us.dict')
-)
-config = {
-    'verbose':False,
-    'audio_file': './output1.wav',
-    'buffer_size':2048,
-    'no_search':False,
-    'full_utt':False,
-    'hmm':os.path.join(model_path, 'en-us'),
-    'lm':os.path.join(model_path, 'en-us.lm.bin'),
-    'dic':os.path.join(model_path, 'cmudict-en-us.dict')
-}
 
-audio = AudioFile(**config)
-for phrase in audio:
-    print(phrase)
-    print(phrase.segments(detailed=True))
-    print(phrase.best(count=10))
-    print('~~~~~~~~~~~~~~')
+def mothercall():
+    # ---------- listening through microphone
+    listen = subprocess.Popen("python to_audio.py", shell=True)
+    listen.wait()
+    print "heard"
 
-'''
-curl -X POST -u 446dda25-aa78-46ed-bc92-d1569008b46f:b56QwI2ofryB --header "Content-Type: audio/wav" --header "Transfer-Encoding: chunked" --data-binary @/recordings/0001.wav "https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?continuous=true"
-curl -u 446dda25-aa78-46ed-bc92-d1569008b46f:b56QwI2ofryB  "https://stream.watsonplatform.net/authorization/api/v1/token?url=https://stream.watsonplatform.net/speech-to-text/api"
-python ./sttClient.py -credentials 446dda25-aa78-46ed-bc92-d1569008b46f:b56QwI2ofryB -model en-US_BroadbandModel
-'''
+    # --------- preprocessing
+    r = sr.Recognizer()
+    r.energy_threshold = 4000
+    with io.open('secret.json') as cred:
+        creds = json.load(cred)
+    with sr.AudioFile('output.wav') as source: # open the audio file for reading
+        audio_data = r.record(source) #read the entire audio file
+    # --------- sending to Microsoft Bing for speech-to-text
+    print 'speech-to-text... '
+    ret=''
+    try:
+        res = r.recognize_bing(audio_data, key=str(creds['bing_api']), language = "en-US", show_all = True)
+    except sr.UnknownValueError:
+        ret = "Microsoft Bing Voice Recognition could not understand audio"
+    except sr.RequestError as e:
+        ret = "Could not request results from Microsoft Bing Voice Recognition service; Check internet?"
+    if ret=='':
+        ret = nlqueen.extract(res['header']['lexical'])
+    # --------- using Google to convert text-to-speech
+    print 'text-to-speech... '
+    tts = gTTS(text=ret, lang='en')
+    tts.save('ret.mp3')
+    print 'Executing mp3'
+    pygame.mixer.init()
+    pygame.mixer.music.load('ret.mp3')
+    pygame.mixer.music.play()
+    while pygame.mixer.music.get_busy() == True:
+        continue
 
-'''import subprocess
-import json
-###############################################################################
-# Gulp (multiple JSON object { ..{1}. }{ ..{2}. }{ ..{3}. } )
-# Returns the last object { ..{3}. }
-###############################################################################
-def gulp(f):
-    index = []
-    count = 0
-    lower = None
-    upper = None
-    i=0
-    while i < len(f):
-        each = f[i]
-        if each == '{':
-            if count == 0:
-                lower = i
-            count = count + 1
-        if each == '}':
-            count = count - 1
-            if count == 0:
-                upper = i
-                index.append([lower, upper])
-                lower = None
-                upper = None
-        i = i + 1
-    return f[index[-1][0] : index[-1][1]+1]
-
-###############################################################################
-# ---------- listening through microphone ----------------------------------- #
-###############################################################################
-listen = subprocess.Popen("python to_audio.py", shell=True)
-listen.wait()
-print "heard"
-
-###############################################################################
-# --------- using IBM Watson to send output.wav file for voice - text ------- #
-###############################################################################
-out = subprocess.Popen("python sttClient.py -credentials 446dda25-aa78-46ed-bc92-d1569008b46f:b56QwI2ofryB -model en-US_BroadbandModel", shell=True)
-out.wait()
-print "Processed though IBM Watson"
-
-###############################################################################
-# -------- reading txt output of IBM JSON object ---------------------------- #
-###############################################################################
-f = open('output/0.json.txt', 'r')
-f = f.read()
-f = gulp(f)
-j = json.loads(f)
-text = j['results'][0]['alternatives'][0]['transcript'] #best possible response
-
-###############################################################################
-# ---------- Using Actions Architecture ------------------------------------- #
-# ---------- NLE -> NLU -> NLG using Actions Architecture ------------------- #
-# ---------- State and Elements to be managed by Actions Architecture ------- #
-# ---------- Receiving the best possible NLG -------------------------------- #
-###############################################################################
-#text = "good morning, it is a lovely day today. buy pizza at 6 PM tomorrow?"
-#from ActionsA.nle.entities import ner_primitive
-#ayrton = ner_primitive(text)
-#print ayrton.view()
-###############################################################################
-# using local python lib to convert text to voice
-#
-###############################################################################
-import pyttsx
-engine = pyttsx.init()
-#engine.say('Sally sells seashells by the seashore.')
-engine.say(text)
-engine.runAndWait()'''
-
-# Alexa integration
+mothercall()

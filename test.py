@@ -45,7 +45,7 @@ with io.open('secret.json') as cred:
     creds = json.load(cred)
 #audio_data = sr.AudioData('speech-to-text-websockets-python/recordingsCopy/0001.wav', 8000, 1)
 #audio_data.get_wav_data(convert_rate = None, convert_width = None)
-with sr.AudioFile('output2.wav') as source:    # open the audio file for reading
+with sr.AudioFile('output.wav') as source:    # open the audio file for reading
     audio_data = r.record(source) #read the entire audio file
 print r.recognize_wit(audio_data, key=str(creds['wit_ai']), show_all = True)
 print r.recognize_bing(audio_data, key=str(creds['bing_api']), language = "en-US", show_all = True)
