@@ -2,6 +2,9 @@
 
 import re, datetime, json
 
+with open('core/khal.json', 'r') as f:
+    khal = json.load(f)
+    
 def getWords(data):
     return re.compile(r"[\w']+").findall(data)
 
@@ -17,7 +20,10 @@ def intent(a):
     # --- update khal
     if a.lower().find('call me') != -1:
         jdump('name', a[a.lower().find('call me')+8:]) #plus 8 because len(call me) + 1
-        return 'Okay, i will call you ' + a[a.lower().find('call me')+8:]
+        return 'Okay, will call you ' + a[a.lower().find('call me')+8:]
+    # --- "what's my name"
+    if a.lower().find('my name') != -1:
+        return 'I call you ' + khal['name']
     # --- find if user is asking for time
     time_text = ['time']
     for each in time_text:
@@ -30,3 +36,5 @@ def intent(a):
 def extract(a):
     res = intent(a)
     return res
+
+#jdump('name', 'love')
