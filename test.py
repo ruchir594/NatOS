@@ -37,7 +37,9 @@ while True:
 decoder.end_utt()
 print ('Best hypothesis segments: ', [seg.word for seg in decoder.seg()])'''
 
-import speech_recognition as sr
+#########################################
+
+"""import speech_recognition as sr
 import io, json
 r = sr.Recognizer()
 r.energy_threshold = 4000
@@ -48,4 +50,15 @@ with io.open('secret.json') as cred:
 with sr.AudioFile('output.wav') as source:    # open the audio file for reading
     audio_data = r.record(source) #read the entire audio file
 print r.recognize_wit(audio_data, key=str(creds['wit_ai']), show_all = True)
-print r.recognize_bing(audio_data, key=str(creds['bing_api']), language = "en-US", show_all = True)
+print r.recognize_bing(audio_data, key=str(creds['bing_api']), language = "en-US", show_all = True)"""
+
+
+##########################################
+import urllib2, urllib, json
+baseurl = "https://query.yahooapis.com/v1/public/yql?"
+city_id = '2295402'
+yql_query = "select * from weather.forecast where woeid="+city_id
+yql_url = baseurl + urllib.urlencode({'q':yql_query}) + "&format=json"
+result = urllib2.urlopen(yql_url).read()
+data = json.loads(result)
+print data

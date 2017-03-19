@@ -1,10 +1,11 @@
 # this is from preliminary testing of NatOS
 
 import re, datetime, json
+from geotext import GeoText
 
 with open('core/khal.json', 'r') as f:
     khal = json.load(f)
-    
+
 def getWords(data):
     return re.compile(r"[\w']+").findall(data)
 
@@ -31,6 +32,16 @@ def intent(a):
             now = datetime.datetime.now()
             res = 'It is ' + str(now.hour) + ' ' + str(now.minute)
             return res
+    # --- weather data
+    weather_text = ['weather']
+    non_cap_weather = ['show', 'tell', 'what', 'is', 'the', 'weather', 'city']
+    for each in weather_text:
+        if each in words:
+            potential = GeoText(' '.join[x for x in words if x not in non_cap_weather])).cities
+            if potential != []:
+                city = potential[0]
+            else:
+                city = khal['city'] 
     return a
 
 def extract(a):

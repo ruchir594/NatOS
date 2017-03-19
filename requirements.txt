@@ -1,0 +1,4 @@
+geotext==0.3.0
+pyaudio
+wave
+yweather=0.1.1
