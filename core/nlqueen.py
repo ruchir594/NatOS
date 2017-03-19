@@ -1,6 +1,6 @@
 # this is from preliminary testing of NatOS
 
-import re, datetime, json
+import re, datetime, json, urllib2, urllib
 from geotext import GeoText
 import yweather
 
@@ -23,6 +23,9 @@ def get_weather(city, type):
     yql_url = baseurl + urllib.urlencode({'q':yql_query}) + "&format=json"
     result = urllib2.urlopen(yql_url).read()
     data = json.loads(result)
+    condition = data['query']['results']['channel']['item']['condition']['text']
+    temperature = str(int((float(data['query']['results']['channel']['item']['forecast'][0]['high'])-32)/1.8))
+    return 'The weather is ' + condition + ' reaching ' + temperature + ' degree celsius'
 
 def intent(a):
     words = getWords(a)
@@ -42,17 +45,18 @@ def intent(a):
             return res
     # --- weather data
     weather_text = ['weather']
-    non_cap_weather = ['show', 'tell', 'what', 'is', 'the', 'weather', 'city']
+    non_cap_weather = ['show', 'tell', 'what', 'is', 'the', 'weather', 'city', 'today',
+                        'right', 'now']
     for each in weather_text:
         if each in words:
-            potential = GeoText(' '.join[x for x in words if x not in non_cap_weather])).cities
+            potential = GeoText(' '.join([x for x in words if x not in non_cap_weather])).cities
             if potential != []:
                 city = potential[0]
                 client = yweather.Client()
                 city = client.fetch_woeid(city)
             else:
                 city = khal['city_id']
-            res = get_weather(city, 'simple')
+            return get_weather(city, 'simple')
     return a
 
 def extract(a):
