@@ -61,4 +61,4 @@ yql_query = "select * from weather.forecast where woeid="+city_id
 yql_url = baseurl + urllib.urlencode({'q':yql_query}) + "&format=json"
 result = urllib2.urlopen(yql_url).read()
 data = json.loads(result)
-print data
+print data['query']['results']['channel']['item']['condition']['text']

@@ -1,2 +1,19 @@
 {"name": "ruchir",
-"city": "Ahmedabad"}
+"city": "Ahmedabad",
+"city_id": "2295402"}
+
+
+    {"lastBildDate": "Sn, 19 Mar 2017 09:48 PM IST", "atmosphere": {"pressre": "1006.0", "rising": "0", "visibility": "16.1", "hmidity": "44"}, "description": "Yahoo! Weather for Ahmedabad, GJ, IN", "langage": "en-s", "title": "Yahoo! Weather - Ahmedabad, GJ, IN",
+    "image": {"rl": "http://l.yimg.com/a/i/brand/prplelogo//h/s/news-wea.gif", "width": "142", "height": "18", "link": "http://weather.yahoo.com", "title": "Yahoo! Weather"}, "item":
+    {"description": "<![CDATA[<img src="http://l.yimg.com/a/i/s/we/52/31.gif"/>\n<BR />\n<b>Crrent Conditions:</b>\n<BR />Clear\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Sn - Snny. High: 94Low: 71\n<BR /> Mon - Snny. High: 96Low: 69\n<BR /> Te - Snny. High: 99Low: 69\n<BR /> Wed - Snny. High: 101Low: 67\n<BR /> Th - Snny. High: 98Low: 69\n<BR />\n<BR />\n<a href="http://s.rd.yahoo.com/dailynews/rss/weather/Contry__Contry/*https://weather.yahoo.com/contry/state/city-2295402/">Fll Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n(provided by <a href="http://www.weather.com" >The Weather Channel</a>)\n<BR />\n]]>",
+        "pbDate": "Sn, 19 Mar 2017 08:30 PM IST",
+        "title": "Conditions for Ahmedabad, GJ, IN at 08:30 PM IST", "long": "72.591751",
+        "forecast":
+        [
+            {"code": "32", "text": "Snny", "high": "94", "low": "71", "date": "19 Mar 2017", "day": "Sn"}, {"code": "32", "text": "Snny", "high": "96", "low": "69", "date": "20 Mar 2017", "day": "Mon"}, 
+            {"code": "32", "text": "Snny", "high": "99", "low": "69", "date": "21 Mar 2017", "day": "Te"}, {"code": "32", "text": "Snny", "high": "101", "low": "67", "date": "22 Mar 2017", "day": "Wed"},
+        {"code": "32", "text": "Snny", "high": "98", "low": "69", "date": "23 Mar 2017", "day": "Th"}, {"code": "32", "text": "Snny", "high": "100", "low": "72", "date": "24 Mar 2017", "day": "Fri"}, {"code": "32", "text": "Snny", "high": "100", "low": "73", "date": "25 Mar 2017", "day": "Sat"}, {"code": "32", "text": "Snny", "high": "101", "low": "74", "date": "26 Mar 2017", "day": "Sn"}, {"code": "32", "text": "Snny", "high": "101", "low": "73", "date": "27 Mar 2017", "day": "Mon"},
+        {"code": "32", "text": "Snny", "high": "102", "low": "75", "date": "28 Mar 2017", "day": "Te"}], "link": "http://s.rd.yahoo.com/dailynews/rss/weather/Contry__Contry/*https://weather.yahoo.com/contry/state/city-2295402/", "lat": "23.030809", "gid": {"isPermaLink": "false"},
+        "condition": {"date": "Sn, 19 Mar 2017 08:30 PM IST", "text": "Clear", "code": "31", "temp": "81"}},
+    "link": "http://s.rd.yahoo.com/dailynews/rss/weather/Contry__Contry/*https://weather.yahoo.com/contry/state/city-2295402/",
+    "location": {"city": "Ahmedabad", "region": " GJ", "contry": "India"}, "ttl": "60", "nits": {"distance": "mi", "speed": "mph", "temperatre": "F", "pressre": "in"}, "astronomy": {"snset": "6:51 pm", "snrise": "6:45 am"}, "wind": {"direction": "23", "speed": "7", "chill": "81"}}}

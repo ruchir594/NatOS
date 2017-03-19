@@ -2,6 +2,7 @@
 
 import re, datetime, json
 from geotext import GeoText
+import yweather
 
 with open('core/khal.json', 'r') as f:
     khal = json.load(f)
@@ -15,6 +16,13 @@ def jdump(element, value):
     khal[element] = value
     with open('core/khal.json', 'w') as f:
         json.dump(khal,f)
+
+def get_weather(city, type):
+    baseurl = "https://query.yahooapis.com/v1/public/yql?"
+    yql_query = "select * from weather.forecast where woeid="+city
+    yql_url = baseurl + urllib.urlencode({'q':yql_query}) + "&format=json"
+    result = urllib2.urlopen(yql_url).read()
+    data = json.loads(result)
 
 def intent(a):
     words = getWords(a)
@@ -40,8 +48,11 @@ def intent(a):
             potential = GeoText(' '.join[x for x in words if x not in non_cap_weather])).cities
             if potential != []:
                 city = potential[0]
+                client = yweather.Client()
+                city = client.fetch_woeid(city)
             else:
-                city = khal['city'] 
+                city = khal['city_id']
+            res = get_weather(city, 'simple')
     return a
 
 def extract(a):
