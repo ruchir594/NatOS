@@ -16,4 +16,4 @@
 
 P.S. Good internet is of utmost important
 
-![alt tag](https://raw.githubusercontent.com/ruchir594/NatOS/branch/path/to/img.png)
+![alt tag](https://raw.githubusercontent.com/ruchir594/NatOS/legacy/story1.png)
