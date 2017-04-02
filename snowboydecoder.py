@@ -8,6 +8,7 @@ import wave
 import os
 import logging
 import subprocess
+import mothership
 
 logging.basicConfig()
 logger = logging.getLogger("snowboy")
@@ -170,9 +171,8 @@ class HotwordDetector(object):
                                          time.localtime(time.time()))
                 logger.info(message)
                 # Calling mother call here, need better integration!!!!!
-                print 'calling parent...'
-                listen = subprocess.Popen("python parent.py", shell=True)
-                listen.wait()
+                print 'calling mothership...'
+                mothership.mothercall()
                 callback = detected_callback[ans-1]
                 if callback is not None:
                     callback()
