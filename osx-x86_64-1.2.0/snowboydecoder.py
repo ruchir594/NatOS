@@ -7,6 +7,7 @@ import time
 import wave
 import os
 import logging
+import subprocess
 
 logging.basicConfig()
 logger = logging.getLogger("snowboy")
@@ -164,9 +165,14 @@ class HotwordDetector(object):
                 logger.warning("Error initializing streams or reading audio data")
             elif ans > 0:
                 message = "Keyword " + str(ans) + " detected at time: "
+                # ---------- listening through microphone
                 message += time.strftime("%Y-%m-%d %H:%M:%S",
                                          time.localtime(time.time()))
                 logger.info(message)
+                # Calling mother call here, need better integration!!!!!
+                print 'calling parent...'
+                listen = subprocess.Popen("python parent.py", shell=True)
+                listen.wait()
                 callback = detected_callback[ans-1]
                 if callback is not None:
                     callback()
