@@ -1,4 +1,1 @@
 current_state,action_on,action_params,next_state
-st001,book,ap002,st002
-st001,book,ap006,st001
-st001,want,ap002,stself

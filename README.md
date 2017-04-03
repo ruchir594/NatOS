@@ -33,6 +33,7 @@ When the WakeWord is detected, the snowboydecoder immediately calls Mothership w
 Common functions and casual Natural Language interactions (weather, time, hi-hello) will be handles by Core directory, mainly, nlqueen.py. Thoughful contributions to casual NLI welcomed.
 
 2. Advance Actions
+
 I. Standard Modules.
 Reminders, Schedule, Monitoring; will be handled by Actions Architecture. Which is our Module Based approach.
 
