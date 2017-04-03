@@ -10,7 +10,7 @@ RECORD_SECONDS = 10
 THRESHOLD = 2500  # The threshold intensity that defines silence
                   # and noise signal (an int. lower than THRESHOLD is silence).
 
-SILENCE_LIMIT = 1  # Silence limit in seconds. The max ammount of seconds where
+SILENCE_LIMIT = 2  # Silence limit in seconds. The max ammount of seconds where
                    # only silence is recorded. When this time passes the
                    # recording finishes and the file is delivered.
 
