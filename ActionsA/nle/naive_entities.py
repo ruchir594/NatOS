@@ -160,22 +160,7 @@ class stamps:
                     'august', 'september', 'october', 'november', 'december', \
                     'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
         time_text = ['evening', 'morning', 'afternoon', 'noon', 'night']
-        for i in range(len(self.checked)):
-            if self.message_text[i][1] in to_fill_quant and i > 0 and self.checked[i] == False and \
-               self.checked[i-1] == False and self.message_text[i-1][1]=='CD':
-                self.quantity.append(self.message_text[i-1][0] + ' ' + self.message_text[i][0])
-                self.checked[i] = True
-                self.checked[i-1] = True
-            if self.message_text[i][0] in day_text and self.checked[i] == False:
-                self.day.append(self.message_text[i][0])
-                self.checked[i] = True
-            if self.message_text[i][0] in time_text and self.checked[i] == False:
-                self.time.append(self.message_text[i][0])
-                self.checked[i] = True
-        for i in range(len(self.checked)):
-            if self.message_text[i][1] == 'CD' and self.checked[i] == False:
-                self.number.append(self.message_text[i][0])
-                self.checked[i] = True
+
 
 
     def completia(self):
@@ -232,6 +217,7 @@ class stamps:
         #print ("len(self.message_text)", len(self.message_text))
         self.location = self.location + b1
         self.location = self.location + b2
+
     def uniquefy(self):
         self.location = uniquefy_p(self.location)
         self.day = uniquefy_p(self.day)
@@ -262,71 +248,6 @@ class stamps:
                 if b[i][0] not in self.location and b[i][0] not in d1:
                     self.baggage.append(b[i][0])
                     self.checked[i] = True
-
-#################################################################################
-def ner(event, full_pos, full_ents):
-    '''Provide an event that contains the following keys:
-      - operation: one of the operations in the operations dict below
-      - tableName: required for operations that interact with DynamoDB
-      - payload: a parameter to pass to the operation being performed
-    '''
-    love = str(event)
-    #print (type(love))
-    lust = getWords_special_location(love)
-    #print (lust)
-    #################################################################################
-    d1 = ['i', 'live', 'in', 'please', 'hi', 'give', 'find', 'who', 'what', 'my', 'hungry', 'near', 'me', 'thank', 'you', \
-            'want', 'to', 'eat', 'like','liked', 'I', 'can', 'you', 'suggest', 'of', 'is', 'are', 'near', 'there', 'some', \
-            'little', 'now', 'wanna', 'want', 'at', 'on', 'in', 'near', 'area', 'next', 'and', 'how', 'about', 'or', \
-            'the', 'a', 'an', 'about', 'for', 'with', 'should', 'could', 'would', 'out','time','person','year','way','day',\
-            'thing','man','world','life','hand','part','child','eye','woman','place','work','week', 'doing',\
-            'case','point','government','company','number','group','problem','fact','be','have','do','say',\
-            'get','make','go','know','take','see','come','think','look','want','give','use','find','tell', 'telling',\
-            'ask','work','seem','feel','try','leave','call','good','new','first','last','long','great','little','own','other',\
-            'old','right','big','high','different','small','large','next','early','young','important','few',\
-            'public','bad','same','able','to','of','in','for','on','with','at','by','from','up','about','into',\
-            'over','after','beneath','under','above','the','and','a','that','I','it','not','he','as','you', \
-            'this','but','his','they','her','she','or','an','will','my','one','all','would','there','their', 'talk', \
-            'talking', 'love', 'loved', 'hello', 'help', 'helping', 'helped', 'pleasure', 'bye', 'goodbye', 'care', 'later', \
-            'no','nothing', 'thanks', 'welcome', 'something', 'hey', 'am', 'month','year','week','day','hour','minute','min','second', \
-            'months','years','weeks','days','hours','minutes','mins','seconds','time', 'today', 'tomorrow', 'am', 'pm',\
-            'january', 'febuary', 'marth', 'april', 'may', 'june', 'july','august', 'september', 'october', 'november', 'december', \
-            'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday','km', 'kilometer', 'kilometers', 'meter', 'm',\
-            'cm', 'kms', 'miles', 'yards', 'feet', 'feets','evening', 'morning', 'afternoon', 'noon', 'night']
-    #d1 = []
-    kiss = ''
-    bang = ''
-    bump_last = ['.', ',', ';', ':', '(', ')', '?', '!']
-    for c_cmall in lust:
-        if c_cmall[-1] not in bump_last:
-            if c_cmall not in d1:
-                kiss = kiss + c_cmall.title() + ' '
-                bang = bang + c_cmall.title() + ' '
-            else:
-                kiss = kiss + c_cmall + ' '
-                bang = bang + c_cmall + ' '
-        else:
-            if c_cmall not in d1:
-                kiss = kiss + c_cmall[:-1].title() + ' '
-                bang = bang + c_cmall[:-1].title() + ' ' + c_cmall[-1] + ' '
-            else:
-                kiss = kiss + c_cmall[:-1] + ' '
-                bang = bang + c_cmall[:-1] + ' ' + c_cmall[-1] + ' '
-    #################################################################################
-    #a = crf_exec(bang, 0)
-    b = conver_pos(full_pos)
-    data_ayrton = full_ents
-    ####################################################################
-    q=[]
-    demo = stamps("yesminister",data_ayrton,love,b,q)
-    demo.fw_dispatch()
-    demo.fill_init()
-    demo.fill_rest()
-    demo.just_location_plus()
-    demo.uniquefy()
-    #demo.baggage()
-    ####################################################################
-    return demo
 
 
 
