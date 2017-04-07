@@ -28,7 +28,7 @@ def get_current_state_user(user_id, start_state = 'st001'):
     for row in file_su:
         if row[0] == user_id:
             return row[1]
-    # if the user is new, i.e. no record of him is found, we push a new record for that id.
+    # --- if the user is new, i.e. no record of him is found, we push a new record for that id.
     push_in_csv(user_id, start_state)
     return start_state
 
