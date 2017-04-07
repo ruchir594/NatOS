@@ -1,4 +1,7 @@
+#from __future__ import print_function
 from csv_reader import read_csv_by_row
+from nltk_chat_util import Chat, reflections
+
 class NoPath(Exception):
     def __init__(self, arg):
         self.arg = arg
@@ -23,6 +26,8 @@ def generate (path = 'undefined', sleepword = 'zebra'):
     try:
         f = read_csv_by_row(path)
         pairs = build_pairs(f)
-        print pairs
-    except Exception:
-        raise NoFile('File not found at ' + path)
+        chatbot = Chat(pairs, reflections)
+        return chatbot
+
+    except Exception, e:
+        raise NoFile('File not found at ' + path + ' // or // ' + str(e))
