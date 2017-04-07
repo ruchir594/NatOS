@@ -1,49 +1,26 @@
- text comes with <text> and <id>
+# Welcome to Actions Architecture
 
- <get_element>
+An Architecture for Hackers and Companies to build Bot Modules.
 
-->  process text, find <action_points> <action_of>
-    We have defined <action_of.txt> and <action_params.txt>
+Integrate automatically
+1. NatOS Raspberry Pi Client
+2. NatOS iOS and Android App
 
- Based on Action_of, decide to <update_element> using <action_params>
+You can build a module with Actions Architecture which will allow you to easily build complex bots,
 
- Use hash table to find current state_id
+or you can build your own module with a compatible endpoint (see below),
 
- Use hash table to <state_id; action_point, Action_params> --->> <new_state_id> //update state_id
+### Let's start with an Example, which will help us elaborate and you understand easily
 
- Use <state_id> to respond_text
+Our own Motivation Bot. using Actions Architecture
 
-<system defined>
- Text, Entities, Action_point
+Things you don't need to write with NatOS and Actions Architecture
 
-<user defined>
- Element
- Action_on, Action_params,
- State, State_transition_table, State_response_nlg
+1. Named Entity Recognizer
+2. Sentence Similarity functions for "sentence hashing"
 
- <b> NLE:  Natural Language Extraction </b>
+Things you do
 
-We have our NER: Named Entity Recognition which will tag entities such as
-1. day
-2. time
-3. duration
-4. distance
-5. quantity
-6. email
-7. phone numbers
-8. location (plus cities and countries)
-
-If you define your own entity like 'music artists' or 'songs' -> then you should define your own bag of words in simple text file with each music artist or a song in new line.
-
-When you define the Element in template.json, make sure you use either one of our given entities from NER, or from the one you defined yourself. It is very crucial that the names match exactly. 
-
-
- Named Entity Recog. extracting root words. knowledge graph.
-
-<b> NLU: Natural Langauge Understanding </b>
-
-State Transition Table
-
-<b> NLG: Natural Langauge Generation </b>
-
-NLG Response Function Associated to each State
+1. specs.json - to specify which NLU, NLG functions to use.
+2. conversation.csv - A simple conversation with possible responses.
+3. bot.py 

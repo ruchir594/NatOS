@@ -239,8 +239,8 @@ def ner_primitive(event):
     demo.just_location_plus()
     demo.uniquefy()
     #demo.baggage()
-    demo.view()
+    #demo.view()
     ####################################################################
     return demo
 
-ner_primitive('set a reminder for tomorrow to get my car')
+#ner_primitive('set a reminder for tomorrow to get my car')
