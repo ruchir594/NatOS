@@ -1,6 +1,4 @@
 from csv_reader import read_csv_by_row
-import csv
-
 class NoPath(Exception):
     def __init__(self, arg):
         self.arg = arg
@@ -17,9 +15,8 @@ def generate (path = 'undefined', sleepword = 'zebra'):
     if path == 'undefined':
         raise NoPath('A path is necessary')
     try:
-        with open(path, 'rb') as csvfile:
-            file_su = csv.reader(csvfile)
-            for each in file_su:
-                print each
+        f = read_csv_by_row(path)
+        for each in f:
+            print each
     except Exception:
         raise NoFile('File not found at ' + path)
