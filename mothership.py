@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # ------------------------------------------------------------------------------
 # this file should be the only file that needs to be executed.
 # it will listen to mike, convert speech to audio, to text, extract intents,

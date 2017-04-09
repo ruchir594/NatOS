@@ -29,13 +29,6 @@ def get_weather(city, type):
 
 def intent(a):
     words = getWords(a)
-    # --- update khal
-    if a.lower().find('call me') != -1:
-        jdump('name', a[a.lower().find('call me')+8:]) #plus 8 because len(call me) + 1
-        return 'Okay, will call you ' + a[a.lower().find('call me')+8:]
-    # --- "what's my name"
-    if a.lower().find('my name') != -1:
-        return 'I call you ' + khal['name']
     # --- find if user is asking for time
     time_text = ['time']
     for each in time_text:
@@ -60,6 +53,20 @@ def intent(a):
     return a
 
 def extract(a):
+    # --- update khal
+    if a.lower().find('call me') != -1:
+        jdump('name', a[a.lower().find('call me')+8:]) #plus 8 because len(call me) + 1
+        return 'Okay, will call you ' + a[a.lower().find('call me')+8:]
+    # --- "what's my name"
+    if a.lower().find('my name') != -1:
+        return 'Indeed ' + khal['name']
+    # --- Greetings Managemeny
+    if a.lower().find('good morning') != -1:
+        return 'Good morning, ' + khal['name']
+    if a.lower().find('good aftertoon') !=  -1:
+        return 'Good afternoon, ' + khal['name']
+    if a.lower().find('good evening') != -1:
+        return 'Good evening, ' + khal['name']
     res = intent(a)
     return res
 
