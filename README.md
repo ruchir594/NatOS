@@ -2,9 +2,9 @@
 
 ### Commands it can understand
 
-> Ok Nat, --Greetings--
+> Ok Nat, -- Greetings --
 
-> OK Nat, Call me <Heart wants what it wants>
+> OK Nat, Call me  -- Khal Drogo? --
 
 > Ok Nat, What time is it?
 
