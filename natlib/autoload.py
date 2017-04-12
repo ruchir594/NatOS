@@ -28,5 +28,3 @@ def autoload(map):
                 temp["module"] = import_module(".{}".format(app), "modules")
             except ValueError, e:
                 print "Cannot load the module " + str(e)
-
-    print apps
