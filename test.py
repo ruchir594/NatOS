@@ -54,7 +54,7 @@ print r.recognize_bing(audio_data, key=str(creds['bing_api']), language = "en-US
 
 
 ##########################################
-import urllib2, urllib, json
+"""import urllib2, urllib, json
 baseurl = "https://query.yahooapis.com/v1/public/yql?"
 city_id = '2295402'
 yql_query = "select * from weather.forecast where woeid="+city_id
@@ -62,4 +62,14 @@ yql_url = baseurl + urllib.urlencode({'q':yql_query}) + "&format=json"
 result = urllib2.urlopen(yql_url).read()
 data = json.loads(result)
 print data['query']['results']['channel']['item']['condition']['text']
-print str((float(data['query']['results']['channel']['item']['forecast'][0]['high'])-32)/1.8)
+print str((float(data['query']['results']['channel']['item']['forecast'][0]['high'])-32)/1.8)"""
+
+
+#####################
+from celery import Celery
+
+app = Celery('tasks', broker='redis://localhost')
+
+@app.task
+def add(x, y):
+    return x + y
