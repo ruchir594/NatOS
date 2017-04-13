@@ -1,7 +1,0 @@
-*.pyc
-secret.json
-imagine.mp3
-logs
-.DS_Store
-lib/rabbitmq_server-3.6.6
-lib/redis-stable.tar.gz
