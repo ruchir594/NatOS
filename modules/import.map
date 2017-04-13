@@ -1,0 +1,8 @@
+{
+    "version": "1.0.0",
+    "apps": {
+        "MotivationBot": "0.1.0",
+        "HelloBot": "0.1.0",
+        "TimeBot": "0.1.0"
+    }
+}

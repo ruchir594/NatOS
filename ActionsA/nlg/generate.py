@@ -1,5 +1,4 @@
 #from __future__ import print_function
-from csv_reader import read_csv_by_row
 from nltk_chat_util import Chat, reflections
 
 class NoPath(Exception):
@@ -24,7 +23,8 @@ def generate (path = 'undefined', sleepword = 'zebra'):
     if path == 'undefined':
         raise NoPath('A path is necessary')
     try:
-        f = read_csv_by_row(path)
+        with open(path) as fh:
+            f = map(lambda x: x.split(","), filter(lambda x: (x != ""), fh.read().split("\n")))
         pairs = build_pairs(f)
         chatbot = Chat(pairs, reflections)
         return chatbot

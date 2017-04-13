@@ -1,3 +1,6 @@
 {
+    "name": "MotivationBot",
+    "version": "1.0.0",
+    "main": "./__init__.py",
     "nlg": "naive"
 }
