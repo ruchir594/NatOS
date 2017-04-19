@@ -1,9 +1,9 @@
 *.pyc
 secret.json
-imagine.mp3
 logs
 .DS_Store
 output.wav
-ret.mp3
 output2.wav
-output
+ret.mp3
+hello.mp3
+imagine.mp3
