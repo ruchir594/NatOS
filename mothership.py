@@ -10,6 +10,7 @@ import speech_recognition as sr
 from gtts import gTTS
 from core import nlqueen
 import pygame
+from ActionsA.nlg import speak
 
 def push_in_csv(req, res, uid):
     timestamp = int(round(time.time() * 1000))
@@ -48,13 +49,7 @@ def mothercall():
         push_in_csv(res['header']['lexical'], ret, 101) # -------- logging in
     # --------- using Google to convert text-to-speech
     print 'text-to-speech... '
-    tts = gTTS(text=ret, lang='en')
-    tts.save('ret.mp3')
-    pygame.mixer.init()
-    pygame.mixer.music.load('ret.mp3')
-    pygame.mixer.music.play()
-    while pygame.mixer.music.get_busy() == True:
-        continue
+    speak.say(ret)
 
 
 #mothercall()
