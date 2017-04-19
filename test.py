@@ -64,12 +64,18 @@ data = json.loads(result)
 print data['query']['results']['channel']['item']['condition']['text']
 print str((float(data['query']['results']['channel']['item']['forecast'][0]['high'])-32)/1.8)"""
 
+def datetime_handler(x):
+    if isinstance(x, datetime.timedelta):
+        return x.isoformat()
+    raise TypeError("Unknown type")
 
-#####################
-from celery import Celery
 
-app = Celery('tasks', broker='redis://localhost')
-
-@app.task
-def add(x, y):
-    return x + y
+from tasks import tiger, my_task
+from tasktiger import Task
+import json
+import datetime
+from bson import json_util
+now = datetime.datetime.now()
+now_plus_10 = now + datetime.timedelta(seconds = 5)
+task = Task(tiger, my_task, (['ruchir']))
+print task.delay(when=datetime.timedelta(seconds = 5))
