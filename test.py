@@ -63,8 +63,8 @@ result = urllib2.urlopen(yql_url).read()
 data = json.loads(result)
 print data['query']['results']['channel']['item']['condition']['text']
 print str((float(data['query']['results']['channel']['item']['forecast'][0]['high'])-32)/1.8)"""
-
-def datetime_handler(x):
+##########################################
+"""def datetime_handler(x):
     if isinstance(x, datetime.timedelta):
         return x.isoformat()
     raise TypeError("Unknown type")
@@ -78,4 +78,11 @@ from bson import json_util
 now = datetime.datetime.now()
 now_plus_10 = now + datetime.timedelta(seconds = 5)
 task = Task(tiger, my_task, (['ruchir']))
-print task.delay(when=datetime.timedelta(seconds = 5))
+print task.delay(when=datetime.timedelta(seconds = 5))"""
+##########################################
+from ActionsA.nlu import scheduler
+import datetime
+now = datetime.datetime.now()
+now_plus_10 = now + datetime.timedelta(seconds = 2)
+
+scheduler.message(now_plus_10, 'Ruchir is awesome!')
