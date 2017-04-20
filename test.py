@@ -81,8 +81,6 @@ task = Task(tiger, my_task, (['ruchir']))
 print task.delay(when=datetime.timedelta(seconds = 5))"""
 ##########################################
 from ActionsA import scheduler
-import datetime
-now = datetime.datetime.now()
-now_plus_10 = now + datetime.timedelta(seconds = 2)
 
-scheduler.message(datetime.timedelta(seconds = 4), 'Ruchir is awesome!')
+scheduler.message(seconds=4, text='Nitesh is brilliant...')
+#scheduler.message(minutes=10, text='Nitesh is okayish!')
