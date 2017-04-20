@@ -80,9 +80,9 @@ now_plus_10 = now + datetime.timedelta(seconds = 5)
 task = Task(tiger, my_task, (['ruchir']))
 print task.delay(when=datetime.timedelta(seconds = 5))"""
 ##########################################
-from ActionsA.nlu import scheduler
+from ActionsA import scheduler
 import datetime
 now = datetime.datetime.now()
 now_plus_10 = now + datetime.timedelta(seconds = 2)
 
-scheduler.message(now_plus_10, 'Ruchir is awesome!')
+scheduler.message(datetime.timedelta(seconds = 4), 'Ruchir is awesome!')

@@ -4,14 +4,13 @@ from nlg.speak import say
 
 tiger = tasktiger.TaskTiger()
 
-say('damn')
-
-@tiger.task()
-def my_task(name):
-    print('Hello', name)
-    say('Hello '+name)
+#say('damn')
 
 @tiger.task()
 def push(line):
     print(line)
     say(line)
+    
+def my_task(name):
+    print('Hello', name)
+    say('Hello '+name)
