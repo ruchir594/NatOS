@@ -2,7 +2,6 @@
 import sys
 from os import environ, path
 sys.path.append(path.join(path.dirname(path.abspath(__file__)), "ActionsA"))
-print sys.path
 from lib import tasktiger
 from redis import Redis
 import re
