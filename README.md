@@ -1,3 +1,37 @@
+# NatOS - Libraries
+
+### Schedule async message with one line. Literally.
+
+```
+from ActionsA import scheduler
+
+scheduler.message(seconds=4, text='Nitesh is brilliant...')
+scheduler.message(minutes=2, text='Or is he?')
+scheduler.message(hours=6, text='Only time will tell')
+scheduler.message(days=7, text='He is!')
+```
+
+### Install
+
+```
+git clone https://github.com/ruchir594/NatOS.git
+cd NatOS
+make
+```
+
+### Technical Documentations
+
+Uses Redis and tasktiger as backend.
+
+During make, redis-server and a queue for "tasks" is added to deamon for perceived seem less interaction. Tasks are async messages to be played after given time.
+
+-- more coming soon --
+
+
+*comments, criticism, and contributions welcome*
+
+*Designed and Tested for Raspberry Pi running Raspbian Jessie*
+
 # NatOS
 
 ### Commands it can understand
