@@ -11,15 +11,17 @@ scheduler.message(hours=6, text='Only time will tell')
 scheduler.message(days=7, text='He is!')
 ```
 
-### Install
+### Installing
 
 ```
 git clone https://github.com/ruchir594/NatOS.git
+
 cd NatOS
-make
+
+sudo make
 ```
 
-### Technical Documentations
+### Technical Documentation
 
 Uses Redis and tasktiger as backend.
 
@@ -27,6 +29,8 @@ During make, redis-server and a queue for "tasks" is added to deamon for perceiv
 
 -- more coming soon --
 
+
+- - - -
 
 *comments, criticism, and contributions welcome*
 
