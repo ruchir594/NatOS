@@ -20,5 +20,10 @@ all:
 	apt-get update
 	apt-get install redis-server
 	pip install -r requirements.txt
+	sudo export PYTHONPATH="${PYTHONPATH}:\"$( cd \"$( dirname \"${BASH_SOURCE[0]}\" )\" && pwd )\""
+	sudo echo >> /etc/init.d
+	sudo echo "service redis-server start" >> /etc/init.d
+	sudo echo >> /etc/init.d
+	sudo echo "nohup python queue-server.py &"
 	service redis-server start
 	nohup $(which) python $(QUEUE_SERVER) & # doesn't works when you reboot, TODO - make service
