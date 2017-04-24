@@ -21,6 +21,7 @@ all:
 	apt-get update
 	apt-get install redis-server
 	pip install -r requirements.txt
+	export PYTHONPATH=$PYTHONPATH:$PWD
 	touch $(INITD_FILE)
 	chmod 777 $(INITD_FILE)
 	printf "\nservice redis-server start\nnohup $(which python) $PWD/queue-server.py &\n" >> $(INITD_FILE)
