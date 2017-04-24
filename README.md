@@ -1,6 +1,6 @@
 # NatOS - Libraries
 
-### Schedule async message with one line. Literally.
+### Schedule async voice message with one line. Literally.
 
 ```
 from ActionsA import scheduler
@@ -15,9 +15,7 @@ scheduler.message(days=7, text='He is!')
 
 ```
 git clone https://github.com/ruchir594/NatOS.git
-
 cd NatOS
-
 sudo make
 ```
 
@@ -25,7 +23,9 @@ sudo make
 
 Uses Redis and tasktiger as backend.
 
-During make, redis-server and a queue for "tasks" is added to deamon for perceived seem less interaction. Tasks are async messages to be played after given time.
+During make, redis-server and a queue for "tasks" is added to deamon for perceived seemless interaction. (Tasks = when to play, text to be played).
+
+text-to-speech is powered by gttx for now.
 
 -- more coming soon --
 
