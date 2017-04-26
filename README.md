@@ -15,8 +15,8 @@ scheduler.message(days=7, text='He is!')
 
 ```
 git clone https://github.com/ruchir594/NatOS.git
-
-cd NatOS && sudo make
+cd NatOS
+sudo make
 ```
 
 ### Technical Documentation
