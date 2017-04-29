@@ -80,7 +80,9 @@ now_plus_10 = now + datetime.timedelta(seconds = 5)
 task = Task(tiger, my_task, (['ruchir']))
 print task.delay(when=datetime.timedelta(seconds = 5))"""
 ##########################################
-from ActionsA import scheduler
+from Modules.MotivationBot import bot
+print bot.lambda_function('who gives?')
+#from ActionsA import scheduler
 
-scheduler.message(seconds=4, text='Nitesh is brilliant...')
+#scheduler.message(seconds=4, text='Nitesh is brilliant...')
 #scheduler.message(minutes=10, text='Nitesh is okayish!')

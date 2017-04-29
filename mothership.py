@@ -21,7 +21,7 @@ def push_in_csv(req, res, uid):
         writer.writerow({'uid': uid, 'req': req, 'res': res, 'timestamp': timestamp, 'date': date})
 
 
-def mothercall():
+'''def mothercall():
     # ---------- listening through microphone
     listen = subprocess.Popen("python to_audio.py", shell=True)
     listen.wait()
@@ -45,14 +45,20 @@ def mothercall():
         ret = "Could not request results from Microsoft Bing Voice Recognition service; Check internet?"
     if ret=='':
         print res
-        try:
-            ret = nlqueen.extract(res['header']['lexical'])
-            push_in_csv(res['header']['lexical'], ret, 101) # -------- logging in
-        except Exception:
-            ret = "Could not here what you are saying... Sorry!"
+        #try:
+        ret = nlqueen.extract(res['header']['lexical'])
+        push_in_csv(res['header']['lexical'], ret, 101)
+        print 'ret ', ret # -------- logging in
+        #except Exception:
+        #    ret = "Could not here what you are saying... Sorry!"
     # --------- using Google to convert text-to-speech
     print 'text-to-speech... '
-    speak.say(ret)
+    speak.say(ret)'''
+
+def mothercall():
+    ret = nlqueen.extract('Go to motivation bot')
+    #push_in_csv(res['header']['lexical'], ret, 101)
+    print 'ret ', ret # -------- logging in
 
 
 #mothercall()

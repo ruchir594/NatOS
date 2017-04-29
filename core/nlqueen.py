@@ -28,13 +28,13 @@ def get_weather(city, type):
     return 'The weather is ' + condition + ' reaching ' + temperature + ' degree celsius'
 
 def peep(a):
-    if a.find('motivation bot') != -1:
-        import sys
-        sys.path.insert(0,'..')
-        from Module.MotivationBot import bot
+    if a.find('motivation') != -1:
+        print 'in here peep   '
+        from Modules.MotivationBot import bot
         return bot.lambda_function(a)
     return ''
 
+#peep('use motivation bot')
 
 def intent(a):
     words = getWords(a)
@@ -65,6 +65,7 @@ def extract(a):
     a=a.lower()
     # --- pipeline?
     jump = peep(a)
+    print 'jump ',jump
     if jump != '':
         return jump
     # --- update khal

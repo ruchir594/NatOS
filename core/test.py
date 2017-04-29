@@ -1,4 +1,4 @@
-from dragonfly.all import Grammar, CompoundRule
+'''from dragonfly.all import Grammar, CompoundRule
 
 # Voice command rule combining spoken form and recognition processing.
 class ExampleRule(CompoundRule):
@@ -10,3 +10,8 @@ class ExampleRule(CompoundRule):
 grammar = Grammar("example grammar")                # Create a grammar to contain the command rule.
 grammar.add_rule(ExampleRule())                     # Add the command rule to the grammar.
 grammar.load()                                      # Load the grammar.
+'''
+import sys
+sys.path.insert(0,'.')
+from Modules.MotivationBot import bot
+print bot.lambda_function('who gives?')

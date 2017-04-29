@@ -24,6 +24,6 @@ all:
 	export PYTHONPATH=$PYTHONPATH:$PWD
 	touch $(INITD_FILE)
 	chmod 777 $(INITD_FILE)
-	printf "\nservice redis-server start\nnohup $(which python) $PWD/queue-server.py &\n" >> $(INITD_FILE)
+	printf "#! /bin/sh\nservice redis-server start\nnohup $(which python) $PWD/queue-server.py &\n" >> $(INITD_FILE)
 	service redis-server start
 	nohup $(which) python $(QUEUE_SERVER) &
