@@ -24,3 +24,17 @@ def message(**kwargs):
 
     task = Task(tiger, push, ([text]))
     print task.delay(when=datetime.timedelta(**{ref: val}))
+
+def reminders(**kwargs):
+    freq = ['everyday']
+    var_freq = 0
+    if kwargs is not None:
+        for key, value in kwargs.iteritems():
+            if key == 'frequency':
+                var_freq = 1
+            if key == 'dobj':
+                blink = value
+        if blink and var_freq == 1:
+            message(seconds=5, text=blink.converse2('per1'))
+            message(seconds=10, text=blink.converse2('per2'))
+    return
