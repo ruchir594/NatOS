@@ -30,4 +30,14 @@ def generate (path = 'undefined', sleepword = 'zebra'):
         return chatbot
 
     except Exception, e:
-        raise NoFile('File not found at ' + path + ' // or // ' + str(e))
+        raise NoFile(str(e))
+
+def generate_lines(path = 'undefined'):
+    if path == 'undefined':
+        raise NoPath('A path is necessary')
+    try:
+        with open(path) as fh:
+            line = fh.readlines()
+            return line
+    except Exception, e:
+        raise NoFile(str(e))

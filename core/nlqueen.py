@@ -32,6 +32,9 @@ def peep(a):
         print 'in here peep   '
         from Modules.MotivationBot import bot
         return bot.lambda_function(a)
+    if a.find('tell') != -1 and a.find('joke') != -1:
+        from Modules.joke import bot
+        return bot.lambda_function(a)
     return ''
 
 #peep('use motivation bot')

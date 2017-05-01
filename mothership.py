@@ -56,9 +56,10 @@ def push_in_csv(req, res, uid):
     speak.say(ret)'''
 
 def mothercall():
-    ret = nlqueen.extract('motivation help me lose weight')
+    ret = nlqueen.extract('tell a joke')
     #push_in_csv(res['header']['lexical'], ret, 101)
-    print 'ret ', ret # -------- logging in
+    print 'text-to-speech... '
+    speak.say(ret)
 
 
 #mothercall()
