@@ -32,7 +32,7 @@ def get_weather(city, type):
     return 'The weather is ' + condition + ' reaching ' + temperature + ' degree celsius'
 
 def peep(a):
-    if a.find('motivation') != -1:
+    if a.find('motivate') != -1:
         print 'in here peep   '
         from Modules.MotivationBot import bot
         return bot.lambda_function(a)
@@ -69,7 +69,7 @@ def intent(a):
     # --- simple reminder
     reminder_text = ['remind', 'reminder']
     number_text = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'fifteen', 'twenty', 'thirty']
-    unit_text = ['seconds', 'minutes', 'hours', 'days']
+    unit_text = ['seconds', 'minutes', 'hours', 'days', 'second', 'minute', 'hour', 'day']
     relative_ref_text=['today','tomorrow']
     buff_text=['in', 'to', 'for']
     dict_num = {
@@ -96,8 +96,11 @@ def intent(a):
             rest = [x for x in words[2:] if x not in num_t and x not in uni_t and x not in rel_t and x not in buff_text]
             if num_t != [] and uni_t != []:
                 txt_msg = ' '.join(rest)
-                scheduler.message(**{uni_t[0]: dict_num[num_t[0]], 'text':txt_msg})
-                return 'Okay ' + khal['name'] + ' i will remind you to ' + txt_msg + ' in ' + str(num_t[0]) + str(uni_t[0])
+                tstamp = uni_t[0]
+                if uni_t[0][-1] != 's':
+                    tstamp = tstamp + 's'
+                scheduler.message(**{tstamp: dict_num[num_t[0]], 'text':txt_msg})
+                return 'Okay ' + khal['name'] + ' i will remind you to ' + txt_msg + ' in ' + str(num_t[0]) +' '+ str(uni_t[0])
 
 
     return a

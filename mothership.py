@@ -21,7 +21,7 @@ def push_in_csv(req, res, uid):
         writer.writerow({'uid': uid, 'req': req, 'res': res, 'timestamp': timestamp, 'date': date})
 
 
-'''def mothercall():
+def mothercall():
     # ---------- listening through microphone
     listen = subprocess.Popen("python to_audio.py", shell=True)
     listen.wait()
@@ -43,22 +43,24 @@ def push_in_csv(req, res, uid):
         ret = "Microsoft Bing Voice Recognition could not understand audio"
     except sr.RequestError as e:
         ret = "Could not request results from Microsoft Bing Voice Recognition service; Check internet?"
-    if res['header']['status'] == 'error':
-        ret = "Could not hear what you are saying. Sorry."
     if ret=='':
         print res
-        #try:
-        ret = nlqueen.extract(res['header']['lexical'])
-        push_in_csv(res['header']['lexical'], ret, 101)
-        print 'ret ', ret # -------- logging in
+        if res['header']['status'] == 'error':
+            ret = "Could not hear what you are saying. Sorry."
+        else:
+
+            #try:
+            ret = nlqueen.extract(res['header']['lexical'])
+            push_in_csv(res['header']['lexical'], ret, 104)
+            print 'ret ', ret # -------- logging in
         #except Exception:
         #    ret = "Could not here what you are saying... Sorry!"
     # --------- using Google to convert text-to-speech
     print 'text-to-speech... '
-    speak.say(ret)'''
+    speak.say(ret)
 
-def mothercall():
-    maketest()
+#def mothercall():
+#    maketest()
 
 def maketest():
     #ret = nlqueen.extract('Ok Nat good morning')
