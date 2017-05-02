@@ -1,8 +1,11 @@
 # this is from preliminary testing of NatOS
 
 import re, datetime, json, urllib2, urllib
+import sys
+sys.path.insert(0,'.')
 from geotext import GeoText
 import yweather
+from ActionsA.nlg import generate
 
 with open('core/khal.json', 'r') as f:
     khal = json.load(f)
@@ -80,11 +83,13 @@ def extract(a):
         return 'Indeed ' + khal['name']
     # --- Greetings Managemeny
     if a.find('good morning') != -1:
-        return 'Good morning, ' + khal['name']
-    if a.find('good aftertoon') !=  -1:
-        return 'Good afternoon, ' + khal['name']
-    if a.find('good evening') != -1:
-        return 'Good evening, ' + khal['name']
+        return 'Good morning ' + khal['name']
+    chatbot = generate.generate(path = './core/conversation.csv')
+    ret = chatbot.converse2(a)
+    print ret, type(ret)
+    if ret != 'NoneConf':
+        return ret + ' ' + khal['name']
+
     res = intent(a)
     return res
 

@@ -1,5 +1,7 @@
 # NatOS - Libraries
 
+If at first you don't succeed, we have a lot in common.
+
 ### Schedule async voice message with one line. Literally.
 
 ```

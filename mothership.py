@@ -43,6 +43,8 @@ def push_in_csv(req, res, uid):
         ret = "Microsoft Bing Voice Recognition could not understand audio"
     except sr.RequestError as e:
         ret = "Could not request results from Microsoft Bing Voice Recognition service; Check internet?"
+    if res['header']['status'] == 'error':
+        ret = "Could not hear what you are saying. Sorry."
     if ret=='':
         print res
         #try:
@@ -56,10 +58,24 @@ def push_in_csv(req, res, uid):
     speak.say(ret)'''
 
 def mothercall():
-    ret = nlqueen.extract('tell a joke')
-    #push_in_csv(res['header']['lexical'], ret, 101)
-    print 'text-to-speech... '
-    speak.say(ret)
+    maketest()
 
+def maketest():
+    ret = nlqueen.extract('Ok Nat good morning')
+    speak.say(ret)
+    ret = nlqueen.extract('OK Nat good bye')
+    speak.say(ret)
+    ret = nlqueen.extract('Ok Nat, call me Nishant')
+    speak.say(ret)
+    ret = nlqueen.extract('Ok Nat, what is the time?')
+    speak.say(ret)
+    ret = nlqueen.extract('OK NAt, how is thw weather?')
+    speak.say(ret)
+    ret = nlqueen.extract('OK Nat, how is weather in Boston')
+    speak.say(ret)
+    ret = nlqueen.extract('Motivate me to burn calories')
+    speak.say(ret)
+    ret = nlqueen.extract('tell a joke')
+    speak.say(ret)
 
 #mothercall()

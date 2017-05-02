@@ -57,6 +57,9 @@ def play_audio_file(fname=DETECT_DING):
     stream_out.close()
     audio.terminate()
 
+def false_audio():
+    return
+
 
 class HotwordDetector(object):
     """
@@ -117,7 +120,7 @@ class HotwordDetector(object):
             stream_callback=audio_callback)
 
 
-    def start(self, detected_callback=play_audio_file,
+    def start(self, detected_callback=false_audio,
               interrupt_check=lambda: False,
               sleep_time=0.03):
         """
@@ -171,6 +174,7 @@ class HotwordDetector(object):
                                          time.localtime(time.time()))
                 logger.info(message)
                 # Calling mother call here, need better integration!!!!!
+                play_audio_file()
                 print 'calling mothership...'
                 mothership.mothercall()
                 callback = detected_callback[ans-1]
