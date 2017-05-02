@@ -6,6 +6,7 @@ sys.path.insert(0,'.')
 from geotext import GeoText
 import yweather
 from ActionsA.nlg import generate
+from ActionsA import scheduler
 
 with open('core/khal.json', 'r') as f:
     khal = json.load(f)
@@ -65,6 +66,40 @@ def intent(a):
             else:
                 city = khal['city_id']
             return get_weather(city, 'simple')
+    # --- simple reminder
+    reminder_text = ['remind', 'reminder']
+    number_text = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'fifteen', 'twenty', 'thirty']
+    unit_text = ['seconds', 'minutes', 'hours', 'days']
+    relative_ref_text=['today','tomorrow']
+    buff_text=['in', 'to', 'for']
+    dict_num = {
+        'one': 1,
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9,
+        'ten': 10,
+        'fifteen': 15,
+        'twenty': 20,
+        'thirty': 30
+    }
+
+    for each in reminder_text:
+        if each in words:
+            num_t = [x for x in number_text if x in words]
+            uni_t = [x for x in unit_text if x in words]
+            rel_t = [x for x in relative_ref_text if x in words]
+            rest = [x for x in words[2:] if x not in num_t and x not in uni_t and x not in rel_t and x not in buff_text]
+            if num_t != [] and uni_t != []:
+                txt_msg = ' '.join(rest)
+                scheduler.message(**{uni_t[0]: dict_num[num_t[0]], 'text':txt_msg})
+                return 'Okay ' + khal['name'] + ' i will remind you to ' + txt_msg + ' in ' + str(num_t[0]) + str(uni_t[0])
+
+
     return a
 
 def extract(a):
