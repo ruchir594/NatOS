@@ -57,10 +57,6 @@ def play_audio_file(fname=DETECT_DING):
     stream_out.close()
     audio.terminate()
 
-def false_audio():
-    return
-
-
 class HotwordDetector(object):
     """
     Snowboy decoder to detect whether a keyword specified by `decoder_model`
@@ -120,7 +116,7 @@ class HotwordDetector(object):
             stream_callback=audio_callback)
 
 
-    def start(self, detected_callback=false_audio,
+    def start(self, detected_callback=play_audio_file,
               interrupt_check=lambda: False,
               sleep_time=0.03):
         """
