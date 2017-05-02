@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "parent.py", line 7, in <module>
+    onestart()
+  File "parent.py", line 5, in onestart
+    listen.wait()
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 1384, in wait
+    pid, sts = _eintr_retry_call(os.waitpid, self.pid, 0)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 476, in _eintr_retry_call
+    return func(*args)
+KeyboardInterrupt
+Listening... Press Ctrl+C to exit
+INFO:snowboy:Keyword 1 detected at time: 2017-05-02 16:38:36
+* Listening mic. 
+Starting record of phrase
+Finished
+* Done recording
+INFO:snowboy:Keyword 1 detected at time: 2017-05-02 16:39:31
+* Listening mic. 
+Starting record of phrase
+Finished
+* Done recording
