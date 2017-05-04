@@ -7,7 +7,7 @@ FORMAT = pyaudio.paInt16
 CHANNELS = 2
 RATE = 44100
 RECORD_SECONDS = 10
-THRESHOLD = 3500  # The threshold intensity that defines silence
+THRESHOLD = 3000  # The threshold intensity that defines silence
                   # and noise signal (an int. lower than THRESHOLD is silence).
 
 SILENCE_LIMIT = 2  # Silence limit in seconds. The max ammount of seconds where
