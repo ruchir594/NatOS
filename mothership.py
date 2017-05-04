@@ -21,7 +21,7 @@ def push_in_csv(req, res, uid):
         writer.writerow({'uid': uid, 'req': req, 'res': res, 'timestamp': timestamp, 'date': date})
 
 
-def mothercall():
+'''def mothercall():
     # ---------- listening through microphone
     listen = subprocess.Popen("python to_audio.py", shell=True)
     listen.wait()
@@ -57,10 +57,10 @@ def mothercall():
         #    ret = "Could not here what you are saying... Sorry!"
     # --------- using Google to convert text-to-speech
     print 'text-to-speech... '
-    speak.say(ret)
+    speak.say(ret)'''
 
-#def mothercall():
-#    maketest()
+def mothercall():
+    maketest()
 
 def maketest():
     #ret = nlqueen.extract('Ok Nat good morning')
