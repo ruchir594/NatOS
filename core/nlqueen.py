@@ -12,6 +12,8 @@ from geotext import GeoText
 import yweather
 from ActionsA.nlg import generate
 from ActionsA import scheduler
+scheduler.message(seconds=4, text='Nitesh is brilliant...')
+from Modules.joke import bot
 
 with open('core/khal.json', 'r') as f:
     khal = json.load(f)
@@ -43,7 +45,7 @@ def peep(a):
         from Modules.MotivationBot import bot
         return bot.lambda_function(a)
     if a.find('tell') != -1 and a.find('joke') != -1:
-        from Modules.joke import bot
+
         return bot.lambda_function(a)
     return ''
 
