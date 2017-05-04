@@ -2,7 +2,8 @@
 
 import re, datetime, json, urllib2, urllib
 import sys
-sys.path.insert(0,'.')
+#sys.path.insert(0,'.')
+sys.path.append('.')
 from geotext import GeoText
 import yweather
 from ActionsA.nlg import generate
