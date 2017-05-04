@@ -4,8 +4,10 @@
 
 import re, datetime, json, urllib2, urllib
 import sys
-sys.path.insert(0,'.')
+from os import environ, path
+#sys.path.insert(0,'.')
 #sys.path.append('.')
+sys.path.append(path.join(path.dirname(path.abspath(__file__)), "." ))
 from geotext import GeoText
 import yweather
 from ActionsA.nlg import generate
@@ -35,8 +37,7 @@ def get_weather(city, type):
     return 'The weather is ' + condition + ' reaching ' + temperature + ' degree celsius'
 
 def peep(a):
-    import sys
-    sys.path.insert(0,'.')
+    print sys.path
     if a.find('motivate') != -1:
         print 'in here peep   '
         from Modules.MotivationBot import bot
