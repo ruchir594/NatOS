@@ -108,7 +108,7 @@ def intent(a):
                 return 'Okay ' + khal['name'] + ' i will remind you to ' + txt_msg + ' in ' + str(num_t[0]) +' '+ str(uni_t[0])
 
 
-    return a
+    return 'NoneConf'
 
 def extract(a):
     a=a.lower()
@@ -117,6 +117,12 @@ def extract(a):
     print 'jump ',jump
     if jump != '':
         return jump
+
+    # --- adv cases
+    res = intent(a)
+    if res != 'NoneConf':
+        return res
+
     # --- update khal
     if a.find('call me') != -1:
         jdump('name', a[a.lower().find('call me')+8:]) #plus 8 because len(call me) + 1
@@ -133,7 +139,7 @@ def extract(a):
     if ret != 'NoneConf':
         return ret + ' ' + khal['name']
 
-    res = intent(a)
-    return res
+
+    return a
 
 #jdump('name', 'love')
