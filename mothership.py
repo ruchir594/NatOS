@@ -73,8 +73,8 @@ def maketest():
     speak.say(ret)
     ret = nlqueen.extract('remind me to buy milk in twenty seconds')
     speak.say(ret)
-    #ret = nlqueen.extract('Motivate me to burn calories')
-    #speak.say(ret)
+    ret = nlqueen.extract('Motivate me to burn calories')
+    speak.say(ret)
     ret = nlqueen.extract('tell a joke')
     speak.say(ret)
 
