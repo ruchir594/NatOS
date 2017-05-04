@@ -37,7 +37,6 @@ def get_weather(city, type):
     return 'The weather is ' + condition + ' reaching ' + temperature + ' degree celsius'
 
 def peep(a):
-    print sys.path
     if a.find('motivate') != -1:
         print 'in here peep   '
         from Modules.MotivationBot import bot
