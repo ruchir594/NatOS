@@ -12,6 +12,7 @@ import speech_recognition as sr
 from gtts import gTTS
 from core import nlqueen
 import pygame
+import snowboydecoder
 from ActionsA.nlg import speak
 
 def push_in_csv(req, res, uid):
@@ -37,6 +38,7 @@ def mothercall():
     with sr.AudioFile('output.wav') as source: # open the audio file for reading
         audio_data = r.record(source) #read the entire audio file
     # --------- sending to Microsoft Bing for speech-to-text
+    snowboydecoder.play_audio_file()
     print 'speech-to-text... '
     ret=''
     try:
