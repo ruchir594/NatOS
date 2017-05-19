@@ -11,7 +11,7 @@ scheduler.message(seconds=7, command='afplay imagine.mp3')
 scheduler.message(minutes=5, command='python 334.py &')
 ```
 
-### Schedule async voice message with one line. Literally.
+### Voice messages too...
 
 ```
 from ActionsA import scheduler
@@ -41,7 +41,8 @@ python queue-server.py &
 
 In Raspberry Pi, for some weird reason, even after adding queue-server into init.d, it still has to be manually started.
 
-Do not forget to run redis-server and queue-server. 
+Do not forget to run redis-server and queue-server.
+
 
 ### Technical Documentation
 
@@ -50,6 +51,8 @@ Uses Redis and tasktiger as backend.
 During make, redis-server and a queue for "tasks" is added to deamon for perceived seemless interaction. (Tasks = when to play, text to be played).
 
 text-to-speech is powered by omxplayer on raspberry pi.
+
+Need to add player option when running voice commands on Mac or Linux. Voice commands only work with omxplayer right now. That can be easily solved by either pushing commands directly, or manually chanding the code.
 
 -- more coming soon --
 
