@@ -2,6 +2,15 @@
 
 If at first you don't succeed, we have a lot in common.
 
+### Scheduling async commands with one line. Literally.
+
+```
+from ActionsA import scheduler
+
+scheduler.message(seconds=7, command='afplay imagine.mp3')
+scheduler.message(minutes=5, command='python 334.py &')
+```
+
 ### Schedule async voice message with one line. Literally.
 
 ```
@@ -21,13 +30,26 @@ cd NatOS
 sudo make
 ```
 
+If you are running this on a Mac or any other Unix, please make sure your redis-server and queue-server is running. Open CLI, and run
+
+```
+redis-server
+
+cd NatOS
+python queue-server.py &
+```
+
+In Raspberry Pi, for some weird reason, even after adding queue-server into init.d, it still has to be manually started.
+
+Do not forget to run redis-server and queue-server. 
+
 ### Technical Documentation
 
 Uses Redis and tasktiger as backend.
 
 During make, redis-server and a queue for "tasks" is added to deamon for perceived seemless interaction. (Tasks = when to play, text to be played).
 
-text-to-speech is powered by gttx for now.
+text-to-speech is powered by omxplayer on raspberry pi.
 
 -- more coming soon --
 

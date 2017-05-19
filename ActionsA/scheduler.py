@@ -1,6 +1,6 @@
 # scheduler.py
 
-from tasks import tiger, my_task, push
+from tasks import tiger, my_task, push, execute
 from tasktiger import Task
 import json
 import datetime
@@ -14,6 +14,7 @@ def message(**kwargs):
     ref = ''
     val = ''
     text = ''
+    command = ''
     if kwargs is not None:
         for key, value in kwargs.iteritems():
             if key in refs:
@@ -21,9 +22,14 @@ def message(**kwargs):
                 val = value
             if key == 'text':
                 text = value
-
-    task = Task(tiger, push, ([text]))
-    print task.delay(when=datetime.timedelta(**{ref: val}))
+            if key == 'command':
+                command = value
+    if text != '':
+        task = Task(tiger, push, ([text]))
+        print task.delay(when=datetime.timedelta(**{ref: val}))
+    if command != '':
+        task = Task(tiger, execute, ([command]))
+        print task.delay(when=datetime.timedelta(**{ref: val}))
 
 def reminders(**kwargs):
     freq = ['everyday']

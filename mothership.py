@@ -82,4 +82,6 @@ def maketest():
     ret = nlqueen.extract('tell a joke')
     speak.say(ret)
 
+#maketest()
+
 #mothercall()
