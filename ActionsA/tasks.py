@@ -8,15 +8,14 @@ tiger = tasktiger.TaskTiger()
 #say('damn')
 
 @tiger.task()
-def push(line):
+def push(line, player='omxplayer'):
     print(line)
-    say(line)
+    say(line, player)
 
 @tiger.task()
 def execute(command):
     print(command)
     listen = subprocess.Popen(command, shell=True)
-
 
 def my_task(name):
     print('Hello', name)

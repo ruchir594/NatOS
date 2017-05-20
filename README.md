@@ -18,9 +18,11 @@ from ActionsA import scheduler
 
 scheduler.message(seconds=4, text='Nitesh is brilliant...')
 scheduler.message(minutes=2, text='Or is he?')
-scheduler.message(hours=6, text='Only time will tell')
-scheduler.message(days=7, text='He is!')
+scheduler.message(hours=6, text='Only time will tell', player='afplay')
+scheduler.message(days=7, text='He is!', player='afplay')
 ```
+
+The default player is omxplayer, which runs well on raspberry Pi, but a player must be specified for other OS.
 
 ### Installing
 
@@ -52,7 +54,6 @@ During make, redis-server and a queue for "tasks" is added to deamon for perceiv
 
 text-to-speech is powered by omxplayer on raspberry pi.
 
-Need to add player option when running voice commands on Mac or Linux. Voice commands only work with omxplayer right now. That can be easily solved by either pushing commands directly, or manually chanding the code.
 
 -- more coming soon --
 

@@ -29,5 +29,5 @@ def lambda_function(a):
     return ret
 
 
-#scheduler.message(seconds=4, text='Nitesh is brilliant...', command='python 334.py')
+#scheduler.message(seconds=4, text='Nitesh is brilliant...', command='python 334.py', player='afplay')
 #scheduler.message(seconds=7, command='afplay ../Chained\ to\ the\ Rhythm.mp3')

@@ -14,6 +14,7 @@ def message(**kwargs):
     ref = ''
     val = ''
     text = ''
+    player = ''
     command = ''
     if kwargs is not None:
         for key, value in kwargs.iteritems():
@@ -24,7 +25,12 @@ def message(**kwargs):
                 text = value
             if key == 'command':
                 command = value
-    if text != '':
+            if key == 'player':
+                player = value
+    if text != '' and player != '':
+        task = Task(tiger, push, ([text, player]))
+        print task.delay(when=datetime.timedelta(**{ref: val}))
+    elif text != '':
         task = Task(tiger, push, ([text]))
         print task.delay(when=datetime.timedelta(**{ref: val}))
     if command != '':
