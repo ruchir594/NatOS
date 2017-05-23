@@ -28,6 +28,6 @@ def lambda_function(a):
             scheduler.reminders(frequency='everyday', dobj=chatbot)
     return ret
 
-
+#scheduler.message(seconds=4, text='Ruchir works', player='afplay')
 #scheduler.message(seconds=4, text='Nitesh is brilliant...', command='python 334.py', player='afplay')
 #scheduler.message(seconds=7, command='afplay ../Chained\ to\ the\ Rhythm.mp3')

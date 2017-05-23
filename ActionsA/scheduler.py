@@ -8,7 +8,6 @@ from bson import json_util
 
 #task = Task(tiger, my_task, (['ruchir']))
 #print task.delay(when=datetime.timedelta(seconds = 5))
-
 def message(**kwargs):
     refs = ['seconds', 'minutes', 'hours', 'days']
     ref = ''
@@ -30,9 +29,11 @@ def message(**kwargs):
     if text != '' and player != '':
         task = Task(tiger, push, ([text, player]))
         print task.delay(when=datetime.timedelta(**{ref: val}))
+        print 'task player... ', task._queue, task._state, task._ts
     elif text != '':
         task = Task(tiger, push, ([text]))
         print task.delay(when=datetime.timedelta(**{ref: val}))
+        print 'task... ', task._queue, task._state, task._ts
     if command != '':
         task = Task(tiger, execute, ([command]))
         print task.delay(when=datetime.timedelta(**{ref: val}))

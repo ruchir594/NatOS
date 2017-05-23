@@ -29,7 +29,6 @@ def mothercall():
     listen = subprocess.Popen("python to_audio_osx.py", shell=True)
     listen.wait()
     print "heard"
-
     # --------- preprocessing
     r = sr.Recognizer()
     r.energy_threshold = 4000
