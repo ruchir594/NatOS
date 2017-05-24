@@ -2,7 +2,7 @@
 
 If at first you don't succeed, we have a lot in common.
 
-### Scheduling async commands with one line. Literally.
+### Scheduling async bash commands with one line. Literally.
 
 ```
 from ActionsA import scheduler

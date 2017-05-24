@@ -29,7 +29,7 @@ def message(**kwargs):
     if text != '' and player != '':
         task = Task(tiger, push, ([text, player]))
         print task.delay(when=datetime.timedelta(**{ref: val}))
-        print 'task player... ', task._queue, task._state, task._ts
+        print 'task player... ', task._queue, task._state, task._ts, task.id
     elif text != '':
         task = Task(tiger, push, ([text]))
         print task.delay(when=datetime.timedelta(**{ref: val}))
