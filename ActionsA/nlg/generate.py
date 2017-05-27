@@ -41,3 +41,6 @@ def generate_lines(path = 'undefined'):
             return line
     except Exception, e:
         raise NoFile(str(e))
+
+def unpick():
+    return None

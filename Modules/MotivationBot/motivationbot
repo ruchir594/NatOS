@@ -1,0 +1,147 @@
+ccopy_reg
+_reconstructor
+p0
+(cActionsA.nlg.nltk_chat_util
+Chat
+p1
+c__builtin__
+object
+p2
+Ntp3
+Rp4
+(dp5
+S'_reflections'
+p6
+(dp7
+S"i'll"
+p8
+S'you will'
+p9
+sS'me'
+p10
+S'you'
+p11
+sS"i've"
+p12
+S'you have'
+p13
+sS'i'
+p14
+g11
+sS'i was'
+p15
+S'you were'
+p16
+sS"you'll"
+p17
+S'I will'
+p18
+sS"i'd"
+p19
+S'you would'
+p20
+sS'you are'
+p21
+S'I am'
+p22
+sS"you've"
+p23
+S'I have'
+p24
+sg11
+g10
+sg16
+S'I was'
+p25
+sS'i am'
+p26
+g21
+sS"i'm"
+p27
+g21
+sS'yours'
+p28
+S'mine'
+p29
+sS'my'
+p30
+S'your'
+p31
+sg31
+g30
+ssS'_pairs'
+p32
+(lp33
+(cre
+_compile
+p34
+(S'hello'
+p35
+I2
+tp36
+Rp37
+(S'hi'
+p38
+S'hello to you too'
+p39
+tp40
+tp41
+a(g34
+(S'(.*)alcohol(.*)'
+p42
+I2
+tp43
+Rp44
+(S'I will do that'
+p45
+tp46
+tp47
+a(g34
+(S'thank you'
+p48
+I2
+tp49
+Rp50
+(S'Happy to help you'
+p51
+S'always here for you'
+p52
+S'I got your back'
+p53
+tp54
+tp55
+a(g34
+(S'(.*)per1(.*)'
+p56
+I2
+tp57
+Rp58
+(S'Excuses dont burn calories'
+p59
+S'Cutting calories doesnt start in the gym'
+p60
+tp61
+tp62
+a(g34
+(S'(.*)per2(.*)'
+p63
+I2
+tp64
+Rp65
+(S'Dont stop when you are tired stop when you are done'
+p66
+S'Eating crappy food is not a reward but a punishment'
+p67
+S'Once on the lips forever on the hips'
+p68
+tp69
+tp70
+asS'_regex'
+p71
+g34
+(S"\\b(you\\ were|you\\ are|you\\'ll|you\\'ve|i\\ was|yours|i\\'ll|i\\'ve|i\\ am|your|i\\'d|you|i\\'m|me|my|i)\\b"
+p72
+I2
+tp73
+Rp74
+sb.
