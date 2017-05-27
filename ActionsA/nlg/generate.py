@@ -1,5 +1,6 @@
 #from __future__ import print_function
 from nltk_chat_util import Chat, reflections
+import pickle
 
 class NoPath(Exception):
     def __init__(self, arg):
@@ -42,5 +43,7 @@ def generate_lines(path = 'undefined'):
     except Exception, e:
         raise NoFile(str(e))
 
-def unpick():
-    return None
+def build_lambda(thispath):
+    chatbot = generate(path = thispath + 'conversation.csv')
+    f = open(thispath+'motivationbot', 'w')
+    pickle.dump(chatbot, f)

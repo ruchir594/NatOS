@@ -16,16 +16,12 @@ thispath = './Modules/MotivationBot/'
 def getWords(data):
     return re.compile(r"[\w']+").findall(data)
 
-def build_lambda(thispath):
-    chatbot = generate.generate(path = thispath + 'conversation.csv')
-    f = open(thispath+'motivationbot', 'w')
-    pickle.dump(chatbot, f)
 
 def lambda_function(a):
     # if chatbot instance doesnt exist, we make it.
     if not os.path.isfile(thispath+'motivationbot'):
         print 'building chatbot instance...'
-        build_lambda(thispath)
+        generate.build_lambda(thispath)
     # loading local chatbot instance so heavy processing must not be needed everytime
     f = open(thispath+'motivationbot', 'r')
     chatbot=pickle.load(f)
