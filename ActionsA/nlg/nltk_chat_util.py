@@ -113,7 +113,6 @@ class Chat(object):
                 return resp
 
     # Hold a conversation with a chatbot
-
     def converse(self, quit="quit"):
         input = randomword(10)
         while input != quit:

@@ -41,7 +41,7 @@ def lambda_function(a):
         ret = chatbot.converse2(a)
     return ret
 
-print lambda_function('hello hello')
+#print lambda_function('hello hello')
 #scheduler.message(seconds=4, text='Ruchir works', player='afplay')
 #scheduler.message(seconds=4, text='Nitesh is brilliant...', command='python 334.py', player='afplay')
 #scheduler.message(seconds=7, command='afplay ../Chained\ to\ the\ Rhythm.mp3')
