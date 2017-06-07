@@ -8,5 +8,7 @@ class suger(object):
     def __init__(self, incoming):
         self.qry=incoming
 
-    def spice(self, botclass):
+    def spice(self, botobj, msg):
+        #botobj: NLTK Chat object object
+        # msg: incoming text message
         
