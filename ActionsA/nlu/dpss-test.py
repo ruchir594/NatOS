@@ -79,71 +79,6 @@ def suit_sim(b, v):
 # Sentence Similarity Based on Semantic Nets and Corpus Statistics.
 # IEEE Transactions on Knowledge and Data Engineering 18, 8, 1138-1150.
 #
-def ssv(t, t1, t2, model):
-    s1 = []
-    s2 = []
-    v1 = []
-    v2 = []
-    for i in range(len(t1)):
-        try:
-            baset1 = model[t1[i]]
-        except Exception, e:
-            baset1 = [0] * 99
-            baset1.append(0.001)
-            baset1 = numpy.random.rand(100,1)
-            if hashing.has_key(t1[i]) == True:
-                baset1 = hashing[t1[i]]
-            else:
-                baset1 = numpy.random.rand(100,1)
-                hashing[t1[i]] = baset1
-            #print "word not found v1 ssv " + t1[i]
-        v1.append(baset1)
-    for i in range(len(t2)):
-        try:
-            baset2 = model[t2[i]]
-        except Exception, e:
-            if hashing.has_key(t2[i]) == True:
-                baset2 = hashing[t2[i]]
-            else:
-                baset2 = numpy.random.rand(100,1)
-                hashing[t2[i]] = baset2
-            #print "word not found v2 ssv " + t2[i]
-        v2.append(baset2)
-    #print v1, v2
-    #print len(t), len(v1), len(v2), len(t1), len(t2), t
-    for i in range(len(t)):
-        if t[i] in t1:
-            s1.append(1)
-        else:
-            try:
-                baset = model[t[i]]
-            except Exception, e:
-                #print 'exception at ' + t[i]
-                if hashing.has_key(t[i]) == True:
-                    baset = hashing[t[i]]
-                else:
-                    baset = numpy.random.rand(100,1)
-                    hashing[t[i]] = baset
-                #print "word not found t[i] ssv " + t[i]
-            #print suit_sim(baset, v1)
-            s1.append(suit_sim(baset, v1))
-        if t[i] in t2:
-            s2.append(1)
-        else:
-            try:
-                baset = model[t[i]]
-            except Exception, e:
-                #print 'exception at ' + t[i]
-                if hashing.has_key(t[i]) == True:
-                    baset = hashing[t[i]]
-                else:
-                    baset = numpy.random.rand(100,1)
-                    hashing[t[i]] = baset
-                #print "word not found t[i] ssv " + t[i]
-            s2.append(suit_sim(baset, v2))
-    print 'sss ',s1, s2
-    similarity = 1 - spatial.distance.cosine(s1, s2)
-    return similarity
 
 def ssv_fast(t, t1, t2, v, v1, v2):
     s1 = []
@@ -184,75 +119,6 @@ hashing = dict()
 # Sentence Similarity Based on Semantic Nets and Corpus Statistics.
 # IEEE Transactions on Knowledge and Data Engineering 18, 8, 1138-1150.
 #
-def wo(t, t1, t2, model):
-    delta = 0.6
-    r1 = []
-    r2 = []
-    v1 = []
-    v2 = []
-    for i in range(len(t1)):
-        try:
-            baset1 = model[t1[i]]
-        except Exception, e:
-            baset1 = [0] * 99
-            baset1.append(0.001)
-            if hashing.has_key(t1[i]) == True:
-                baset1 = hashing[t1[i]]
-            else:
-                baset1 = numpy.random.rand(100,1)
-                hashing[t1[i]] = baset1
-            #print "word not found v1 wo " + t1[i],  baset1
-        v1.append(baset1)
-    for i in range(len(t2)):
-        try:
-            baset2 = model[t2[i]]
-        except Exception, e:
-            if hashing.has_key(t2[i]) == True:
-                baset2 = hashing[t2[i]]
-            else:
-                baset2 = numpy.random.rand(100,1)
-                hashing[t2[i]] = baset2
-            #print "word not found v2 wo " + t2[i]
-            #print "word not found v2 wo " + t2[i],  baset2
-        v2.append(baset2)
-
-    for i in range(len(t)):
-        if t[i] in t1:
-            r1.append(t1.index(t[i])+1)
-        else:
-            try:
-                baset = model[t[i]]
-            except Exception, e:
-                if hashing.has_key(t[i]) == True:
-                    baset = hashing[t[i]]
-                else:
-                    baset = numpy.random.rand(100,1)
-                    hashing[t[i]] = baset
-                #print "word not found t[i] wo " + t[i]
-            r1.append(suit_index(baset, v1))
-        if t[i] in t2:
-            r2.append(t2.index(t[i])+1)
-        else:
-            try:
-                baset = model[t[i]]
-            except Exception, e:
-                if hashing.has_key(t[i]) == True:
-                    baset = hashing[t[i]]
-                else:
-                    baset = numpy.random.rand(100,1)
-                    hashing[t[i]] = baset
-                #print "word not found t[i] wo " + t[i]
-            r2.append(suit_index(baset, v2))
-    print 'wo ', r1, r2
-    r = []
-    q = []
-    for i in range(len(r1)):
-        r.append(r1[i]-r2[i])
-        q.append(r1[i]+r2[i])
-    r = norm(r)
-    q = norm(q)
-    #print r,q
-    return (1 - r/q)
 
 def wo_fast(t, t1, t2, v, v1, v2):
     delta = 0.6
@@ -431,32 +297,7 @@ def test():
     similarity_wo = wo_fast(t, t1, t2, v, v1, v2)
     print similarity_ssv, similarity_wo, similarity_dp
 
-def dp_old(t, t1, t2, d1, d2):
-    m1 = numpy.zeros((len(t),len(t)))
-    m2 = numpy.zeros((len(t),len(t)))
-    for each in d1:
-        try:
-            m1[t.index(each[0])][t.index(each[2])] = 1
-            m1[t.index(each[2])][t.index(each[0])] = 1
-            m1[t.index(each[0])][t.index(each[0])] = 1
-            m1[t.index(each[2])][t.index(each[2])] = 1
-        except Exception, e:
-            j = None
-    for each in d2:
-        try:
-            m2[t.index(each[0])][t.index(each[2])] = 1
-            m2[t.index(each[2])][t.index(each[0])] = 1
-            m2[t.index(each[0])][t.index(each[0])] = 1
-            m2[t.index(each[2])][t.index(each[2])] = 1
-        except Exception, e:
-            j = None
-    print m1
-    print m2
-    similarity_dp_1 = 1 - numpy.linalg.norm(m1-m2)/(numpy.linalg.norm(m1)+numpy.linalg.norm(m2))
-    similarity_dp_2 = 1 - float(numpy.count_nonzero(m1-m2)) / float((numpy.count_nonzero(m1) + numpy.count_nonzero(m2)))
-    #similarity_dp = 1 - numpy.linalg.norm(m1-m2)/numpy.linalg.norm(m1+m2)
-    print 'old similarity_dp ', similarity_dp_1
-    return similarity_dp_1
+
 
 import time
 start = time.time()
