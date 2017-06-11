@@ -90,7 +90,10 @@ def intent(a):
         'ten': 10,
         'fifteen': 15,
         'twenty': 20,
-        'thirty': 30
+        'thirty': 30,
+        'fourty': 40,
+        'fifty': 50,
+        'sixty': 60
     }
 
     for each in reminder_text:
