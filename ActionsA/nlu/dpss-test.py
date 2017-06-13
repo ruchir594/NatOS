@@ -2,7 +2,7 @@ import requests, json, re, word2vec, math
 from scipy import spatial
 import numpy
 import word2vec
-from space_action import get_postagging, get_dependency
+#from space_action import get_postagging, get_dependency
 
 def parse_text(parser, sentence, state = None):
     parsedEx = parser(sentence)
@@ -231,7 +231,7 @@ def advance_ssv(t, t1, t2):
 def test():
     #from spacy.en import English
     #parser = English()
-    model = word2vec.load('./latents.bin')
+    model = word2vec.load('../latents.bin')
     t1 = "a quick brown dog jumps over the lazy fox"
     t2 = "a fast brown fox jumps over the lazy dog"
     #t2 = "he is a brown fox"
