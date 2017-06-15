@@ -1,3 +1,5 @@
+import re
+
 class NoPath(Exception):
     def __init__(self, arg):
         self.arg = arg
@@ -10,6 +12,9 @@ class NoFile(Exception):
     def __str__(self):
         return repr(self.arg)
 
+def getWordsX(data):
+    return re.compile(r"[\w'.*]+").findall(data)
+
 class suger(object):
     # this class will judge if chatbot object can automate this response
 
@@ -19,6 +24,7 @@ class suger(object):
 
     def __init__(self, pathfile = 'undefined'):
         self.conversation_filepath = pathfile
+        self.parts = []
 
     def spice(self):
         # builds NLTK chatobject like from original CSV
@@ -27,6 +33,12 @@ class suger(object):
         try:
             with open(self.conversation_filepath+'conversation.csv') as fh:
                 f = map(lambda x: x.split(","), filter(lambda x: (x != ""), fh.read().split("\n")))
-            print f
+            for each in f:
+                words = getWordsX(each[0])
+                x=[]
+                for y in words:
+                    x.extend(y.split('*'))
+                self.parts.append(x)
+            print self.parts
         except Exception, e:
             raise NoFile(str(e))
