@@ -21,6 +21,14 @@ def build_pairs(f):
     return tuple(a)
 
 def generate (path = 'undefined', sleepword = 'zebra'):
+    # NLTK Chat pairs are written in a CSV file. Check out following link
+    # http://www.nltk.org/_modules/nltk/chat/eliza.html
+
+    # There is a custom nltk_chat_util file in this directory, which uses
+    # modified converse function to find the best match.
+
+    # NLTK simply matches the best string to respond in a very naive way
+    # we are going to do a bit better, se NLU Autobot.py
     if path == 'undefined':
         raise NoPath('A path is necessary')
     try:

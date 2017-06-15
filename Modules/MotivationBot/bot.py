@@ -9,6 +9,7 @@ import os.path
 #from ActionsA import scheduler
 #from ActionsA.nlg import speak
 from ActionsA.nlg import generate
+from ActionsA.nlu import autobot
 from ActionsA import scheduler
 
 thispath = './Modules/MotivationBot/'
@@ -39,9 +40,11 @@ def lambda_function(a):
             scheduler.reminders(frequency='everyday', dobj=chatbot)
     else:
         ret = chatbot.converse2(a)
+        decepticon = autobot.suger(thispath)
+        decepticon.spice()
     return ret
 
-#print lambda_function('hello hello')
+print lambda_function('hello hello')
 #scheduler.message(seconds=4, text='Ruchir works', player='afplay')
 #scheduler.message(seconds=4, text='Nitesh is brilliant...', command='python 334.py', player='afplay')
 #scheduler.message(seconds=7, command='afplay ../Chained\ to\ the\ Rhythm.mp3')
