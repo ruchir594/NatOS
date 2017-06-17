@@ -2,7 +2,25 @@ import requests, json, re, word2vec, math
 from scipy import spatial
 import numpy
 import word2vec
-#from space_action import get_postagging, get_dependency
+from sets import Set
+
+# Preprocessing file
+# Functions which will be used by othe NLU files
+
+def latentify(words):
+    a = []
+    model = word2vec.load('./ActionsA/latents.bin')
+    for each in words:
+        if each == '':
+            # beginning of a star '*'
+            a.append(numpy.zeros(100))
+        else:
+            try:
+                m = model[each]
+            except Exception:
+                m = numpy.random.rand(100,1)
+            a.append(m)
+    return a
 
 def parse_text(parser, sentence, state = None):
     parsedEx = parser(sentence)
@@ -144,85 +162,6 @@ def wo_fast(t, t1, t2, v, v1, v2):
     #print r,q
     return (1 - r/q)
 
-def dp(t, t1, t2, d1, d2, model):
-    v1 = []
-    v2 = []
-    for i in range(len(t1)):
-        try:
-            baset1 = model[t1[i]]
-        except Exception, e:
-            if hashing.has_key(t1[i]) == True:
-                baset1 = hashing[t1[i]]
-            else:
-                baset1 = numpy.random.rand(100,1)
-                hashing[t1[i]] = baset1
-            #print "word not found v1 wo " + t1[i]
-        v1.append(baset1)
-    for i in range(len(t2)):
-        try:
-            baset2 = model[t2[i]]
-        except Exception, e:
-            if hashing.has_key(t2[i]) == True:
-                baset2 = hashing[t2[i]]
-            else:
-                baset2 = numpy.random.rand(100,1)
-                hashing[t2[i]] = baset2
-            #print "word not found v2 wo " + t2[i]
-        v2.append(baset2)
-    # not the v1 and v2 have all vectors
-    m1 = numpy.zeros((len(t),len(t)))
-    m2 = numpy.zeros((len(t),len(t)))
-    for i in range(len(t)):
-        if t[i] in t1:
-            m1[i][i] = 1*4
-        else:
-            try:
-                baset = model[t[i]]
-            except Exception, e:
-                if hashing.has_key(t[i]) == True:
-                    baset = hashing[t[i]]
-                else:
-                    baset = numpy.random.rand(100,1)
-                    hashing[t[i]] = baset
-            m1[i][i] = suit_sim(baset, v1)*4
-        if t[i] in t2:
-            m2[i][i] = 1*4
-        else:
-            try:
-                baset = model[t[i]]
-            except Exception, e:
-                if hashing.has_key(t[i]) == True:
-                    baset = hashing[t[i]]
-                else:
-                    baset = numpy.random.rand(100,1)
-                    hashing[t[i]] = baset
-            m2[i][i] = suit_sim(baset, v2)*4
-    for i in range(len(d1)):
-        d1[i][1] = 'DEP'
-        d1[i][3] = []
-        d1[i][4] = []
-    for i in range(len(d2)):
-        d2[i][1] = 'DEP'
-        d2[i][3] = []
-        d2[i][4] = []
-    for i in range(len(t)):
-        for j in range(len(t)):
-            if [t[i],'DEP',t[j],[],[]] in d1:
-                m1[i][j] = 1
-                m1[j][i] = 1
-            if [t[i],'DEP',t[j],[],[]] in d2:
-                m2[i][j] = 1
-                m2[j][i] = 1
-
-    print m1
-    print m2
-    similarity_dp_cnze = 1 - float(numpy.count_nonzero(m1-m2)) / float((numpy.count_nonzero(m1) + numpy.count_nonzero(m2)))
-    print 'cnze ', similarity_dp_cnze
-    similarity_dp = 1 - numpy.linalg.norm(m1-m2)/(numpy.linalg.norm(m1)+numpy.linalg.norm(m2))
-    print 'norm ', similarity_dp
-    return similarity_dp, similarity_dp_cnze
-#dp(["hello", "a","b","c"],[],[],[],[])
-
 def advance_ssv(t, t1, t2):
     v1 = []
     v2 = []
@@ -346,7 +285,7 @@ def test():
 
 
 
-import time
+"""import time
 start = time.time()
 test()
 done = time.time()
@@ -355,4 +294,4 @@ print '~~~~~~~~~~~~', '\n'
 print distance("a quick brown dog jumps over the lazy fox", "what jumps over the lazy fox is a quick brown dog")
 print 'time elapsed '
 
-print(elapsed)
+print(elapsed)"""
