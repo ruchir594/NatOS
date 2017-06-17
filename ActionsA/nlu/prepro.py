@@ -8,6 +8,8 @@ from sets import Set
 # Functions which will be used by othe NLU files
 
 def latentify(words, model):
+    # taking model as an argument makes this function recallable with very less
+    # turnaround time
     a = []
     zeros = numpy.zeros(100)
     zeros = zeros.tolist()
@@ -167,8 +169,9 @@ def advance_ssv(t, t1, t2):
     v1 = []
     v2 = []
 
-def distance(t1,t2):
-    model = word2vec.load('../latents.bin')
+def distance(t1,t2,model):
+    # taking model as an argument makes everything much faster
+    # because it needs to be loaded only once, in autobot
     sentence_1 = unicode(t1, "utf-8")
     sentence_2 = unicode(t2, "utf-8")
     t1 = getWords(t1)
