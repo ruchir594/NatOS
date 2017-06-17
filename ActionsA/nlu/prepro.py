@@ -7,19 +7,20 @@ from sets import Set
 # Preprocessing file
 # Functions which will be used by othe NLU files
 
-def latentify(words):
+def latentify(words, model):
     a = []
-    model = word2vec.load('./ActionsA/latents.bin')
+    zeros = numpy.zeros(100)
+    zeros = zeros.tolist()
     for each in words:
         if each == '':
             # beginning of a star '*'
-            a.append(numpy.zeros(100))
+            a.append(zeros)
         else:
             try:
                 m = model[each]
             except Exception:
-                m = numpy.random.rand(100,1)
-            a.append(m)
+                m = numpy.random.rand(100)
+            a.append(m.tolist())
     return a
 
 def parse_text(parser, sentence, state = None):

@@ -1,5 +1,7 @@
 import re
 from prepro import latentify
+import word2vec
+import json
 
 class NoPath(Exception):
     def __init__(self, arg):
@@ -29,6 +31,11 @@ class suger(object):
 
     def spice(self):
         # builds NLTK chatobject like from original CSV
+
+        model = word2vec.load('./ActionsA/latents.bin')
+
+        data = {}
+
         if self.conversation_filepath == 'undefined':
             raise NoPath('A path is necessary')
 
@@ -40,10 +47,11 @@ class suger(object):
                 x=[]
                 for y in words:
                     x.extend(y.split('*'))
-                self.parts.append(x)
-            print self.parts
+                features = latentify(x, model)
+                data[each[0]] = features
+            print data
+            with open(self.conversation_filepath+'feature_file.txt', 'w') as outfile:
+                json.dump(data, outfile)
+
         except Exception, e:
             raise NoFile(str(e))
-
-        print self.parts[1]
-        print latentify(self.parts[1])
