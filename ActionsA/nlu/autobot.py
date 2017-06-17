@@ -1,5 +1,5 @@
 import re
-from prepro import latentify
+from prepro import latentify, distance, distance2
 import word2vec
 import json
 
@@ -58,10 +58,12 @@ class suger(object):
 
 
     def salt(self):
-        with open(self.conversation_filepath+'feature_file.txt') as data_file:
-            data = json.load(data_file)
         print '\nfrom salt !!!!!', '\n'
-        print data['*per2*']
+        model = word2vec.load('./ActionsA/latents.bin')
+        with open(self.conversation_filepath+'conversation.csv') as fh:
+            f = map(lambda x: x.split(","), filter(lambda x: (x != ""), fh.read().split("\n")))
+        for each in f:
+            print distance(each[0],'very well said i bet but i need more beer', model)
 
     def chef(self, dish):
         # dish: a string
@@ -69,7 +71,11 @@ class suger(object):
         # this method will do latent features mapping to judge if bot can answer
         # this incoming string well or not.
 
-        with open(self.conversation_filepath+'feature_file.txt') as data_file:
-            data = json.load(data_file)
+        model = word2vec.load('./ActionsA/latents.bin')
 
-        
+        j=[]
+        with open(self.conversation_filepath+'conversation.csv') as fh:
+            f = map(lambda x: x.split(","), filter(lambda x: (x != ""), fh.read().split("\n")))
+        for each in f:
+            j.append((each[0],distance(each[0],dish, model)))
+        print j

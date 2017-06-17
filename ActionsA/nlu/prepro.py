@@ -169,6 +169,41 @@ def advance_ssv(t, t1, t2):
     v1 = []
     v2 = []
 
+def distance2(v1,t2,model):
+    # taking model as an argument makes everything much faster
+    # because it needs to be loaded only once, in autobot
+    t2 = getWords(t2)
+    t2 = flex(t2)
+    v=[]
+    v2=[]
+
+
+    for i in range(len(t2)):
+        try:
+            baset2 = model[t2[i]]
+        except Exception, e:
+            if hashing.has_key(t2[i]) == True:
+                baset2 = hashing[t2[i]]
+            else:
+                baset2 = numpy.random.rand(100,1)
+                hashing[t2[i]] = baset2
+        v2.append(baset2)
+
+    t, v = union(t1, t2, v1, v2)
+
+
+    #print d1
+    #print d2
+    #similarity_dp = dp_old(t, t1, t2, d1, d2)
+    similarity_dp, similarity_dp_cnze = 0, 0
+    #similarity_dp, similarity_dp_cnze = dp(t, t1, t2, d1, d2, model)
+    # -------------- sementic similarity between two sentences ------- #
+    similarity_ssv = ssv_fast(t, t1, t2, v, v1, v2)
+    #print 'ssv ', similarity_ssv
+    # ----------------- word similarity between sentences ------------ #
+    similarity_wo = wo_fast(t, t1, t2, v, v1, v2)
+    return similarity_ssv, similarity_wo
+
 def distance(t1,t2,model):
     # taking model as an argument makes everything much faster
     # because it needs to be loaded only once, in autobot
