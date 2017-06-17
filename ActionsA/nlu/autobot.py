@@ -78,4 +78,4 @@ class suger(object):
             f = map(lambda x: x.split(","), filter(lambda x: (x != ""), fh.read().split("\n")))
         for each in f:
             j.append((each[0],distance(each[0],dish, model)))
-        print j
+        return j

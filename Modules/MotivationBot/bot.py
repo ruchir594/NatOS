@@ -39,11 +39,19 @@ def lambda_function(a):
             ret = 'Okay, I will remind you.'
             scheduler.reminders(frequency='everyday', dobj=chatbot)
     else:
-        ret = chatbot.converse2(a)
+
         decepticon = autobot.suger(thispath)
         #decepticon.spice()
         #decepticon.salt()
-        decepticon.chef('very well said i bet but i need more beer')
+        j = decepticon.chef('very well said i bet but i need more beer')
+        print j
+        closest = max([i[1] for i in j])
+        for each in j:
+            if each[1] == closest:
+                closest = each[0]
+                break
+
+        ret = chatbot.converse2(closest)
     return ret
 
 print lambda_function('hello hello')
