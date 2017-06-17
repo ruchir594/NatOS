@@ -42,6 +42,7 @@ def lambda_function(a):
         ret = chatbot.converse2(a)
         decepticon = autobot.suger(thispath)
         decepticon.spice()
+        decepticon.salt()
     return ret
 
 print lambda_function('hello hello')

@@ -49,9 +49,16 @@ class suger(object):
                     x.extend(y.split('*'))
                 features = latentify(x, model)
                 data[each[0]] = features
-            print data
+            #print data
             with open(self.conversation_filepath+'feature_file.txt', 'w') as outfile:
                 json.dump(data, outfile)
 
         except Exception, e:
             raise NoFile(str(e))
+
+
+    def salt(self):
+        with open(self.conversation_filepath+'feature_file.txt') as data_file:
+            data = json.load(data_file)
+        print '\nfrom salt !!!!!', '\n'
+        print data['*per2*']
