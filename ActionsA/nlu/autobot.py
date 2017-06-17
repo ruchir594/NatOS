@@ -62,3 +62,14 @@ class suger(object):
             data = json.load(data_file)
         print '\nfrom salt !!!!!', '\n'
         print data['*per2*']
+
+    def chef(self, dish):
+        # dish: a string
+        # this is where every incoming message comes in dish variable.
+        # this method will do latent features mapping to judge if bot can answer
+        # this incoming string well or not.
+
+        with open(self.conversation_filepath+'feature_file.txt') as data_file:
+            data = json.load(data_file)
+
+        
