@@ -44,7 +44,7 @@ def getWords(data):
     return re.compile(r"[\w]+").findall(data)
 
 def getWordsX(data):
-    return re.compile(r"[\w'.]+").findall(data)
+    return re.compile(r"[\w'.*]+").findall(data)
 
 def union(t1, t2, v1, v2):
     t = []
@@ -209,8 +209,9 @@ def distance(t1,t2,model):
     # because it needs to be loaded only once, in autobot
     sentence_1 = unicode(t1, "utf-8")
     sentence_2 = unicode(t2, "utf-8")
-    t1 = getWords(t1)
-    t2 = getWords(t2)
+    t1 = getWordsX(t1)
+    t2 = getWordsX(t2)
+    print t1
     t1 = flex(t1)
     t2 = flex(t2)
     v=[]
