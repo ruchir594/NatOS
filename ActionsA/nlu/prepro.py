@@ -215,7 +215,6 @@ def distance(t1,t2,model):
     for each in t1:
         xt1.extend(each.split('*'))
     t1=xt1
-    print t1
     # t2 will never have a '*' in it's string. :)
     t1 = flex(t1)
     t2 = flex(t2)
@@ -224,16 +223,18 @@ def distance(t1,t2,model):
     v2=[]
 
     for i in range(len(t1)):
-        
-        try:
-            baset1 = model[t1[i]]
-        except Exception, e:
-            if hashing.has_key(t1[i]) == True:
-                baset1 = hashing[t1[i]]
-            else:
-                baset1 = numpy.random.rand(100,1)
-                hashing[t1[i]] = baset1
-        v1.append(baset1)
+        if t1[i] == '':
+            v1.append(numpy.ones(100))
+        else:
+            try:
+                baset1 = model[t1[i]]
+            except Exception, e:
+                if hashing.has_key(t1[i]) == True:
+                    baset1 = hashing[t1[i]]
+                else:
+                    baset1 = numpy.random.rand(100)
+                    hashing[t1[i]] = baset1
+            v1.append(baset1)
     for i in range(len(t2)):
         try:
             baset2 = model[t2[i]]
@@ -241,10 +242,9 @@ def distance(t1,t2,model):
             if hashing.has_key(t2[i]) == True:
                 baset2 = hashing[t2[i]]
             else:
-                baset2 = numpy.random.rand(100,1)
+                baset2 = numpy.random.rand(100)
                 hashing[t2[i]] = baset2
         v2.append(baset2)
-
     t, v = union(t1, t2, v1, v2)
 
 
