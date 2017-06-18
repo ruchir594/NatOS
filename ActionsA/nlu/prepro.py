@@ -211,7 +211,12 @@ def distance(t1,t2,model):
     sentence_2 = unicode(t2, "utf-8")
     t1 = getWordsX(t1)
     t2 = getWordsX(t2)
+    xt1=[]
+    for each in t1:
+        xt1.extend(each.split('*'))
+    t1=xt1
     print t1
+    # t2 will never have a '*' in it's string. :)
     t1 = flex(t1)
     t2 = flex(t2)
     v=[]
@@ -219,6 +224,7 @@ def distance(t1,t2,model):
     v2=[]
 
     for i in range(len(t1)):
+        
         try:
             baset1 = model[t1[i]]
         except Exception, e:
