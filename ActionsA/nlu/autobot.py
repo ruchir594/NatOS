@@ -77,5 +77,7 @@ class suger(object):
         with open(self.conversation_filepath+'conversation.csv') as fh:
             f = map(lambda x: x.split(","), filter(lambda x: (x != ""), fh.read().split("\n")))
         for each in f:
-            j.append((each[0],distance(each[0],dish, model)))
+            # Calling distance, and calculating distance of incoming dish string to all other
+            # responses in conv.csv
+            j.append((each[0], distance(each[0],dish, model)))
         return j

@@ -211,6 +211,8 @@ def distance(t1,t2,model):
     sentence_2 = unicode(t2, "utf-8")
     t1 = getWordsX(t1)
     t2 = getWordsX(t2)
+    # we gotta take care of '*' and handle them separately from
+    # same non asterics seqence
     xt1=[]
     for each in t1:
         xt1.extend(each.split('*'))
@@ -223,6 +225,7 @@ def distance(t1,t2,model):
     v2=[]
 
     for i in range(len(t1)):
+        # Taking care of '*' right here
         if t1[i] == '':
             v1.append(numpy.ones(100))
         else:
