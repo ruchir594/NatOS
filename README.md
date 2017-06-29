@@ -24,6 +24,10 @@ scheduler.message(days=7, text='He is!', player='mpg123')
 
 The default player is omxplayer, which runs well on raspberry Pi, but a player must be specified for other OS.
 
+### NLTK Smarter with sentence similarity
+
+
+
 ### Installing
 
 ```
