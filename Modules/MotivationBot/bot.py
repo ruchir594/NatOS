@@ -43,7 +43,7 @@ def lambda_function(a):
         decepticon = autobot.suger(thispath)
         #decepticon.spice()
         #decepticon.salt()
-        j = decepticon.chef('very well said i bet but i need more beer')
+        j = decepticon.chef(a)
         print j
         closest = max([i[1] for i in j])
         for each in j:
@@ -54,7 +54,8 @@ def lambda_function(a):
         ret = chatbot.converse2(closest)
     return ret
 
-print lambda_function('hello hello')
+print lambda_function('very well said i bet but i need more beer')
+print lambda_function('hello hello to you')
 #scheduler.message(seconds=4, text='Ruchir works', player='afplay')
 #scheduler.message(seconds=4, text='Nitesh is brilliant...', command='python 334.py', player='afplay')
 #scheduler.message(seconds=7, command='afplay ../Chained\ to\ the\ Rhythm.mp3')
