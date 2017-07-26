@@ -57,7 +57,7 @@ def lambda_function(a):
 #print lambda_function('very well said i bet but i need more beer')
 #print lambda_function('hello hello to you')
 print lambda_function('whats up with? per3 per4?')
-print lambda_function('hmm how about per3 and per4 ???')
+print lambda_function('hmm how about per3 and per4mance ???')
 print lambda_function('go to hell my lord')
 #scheduler.message(seconds=4, text='Ruchir works', player='afplay')
 #scheduler.message(seconds=4, text='Nitesh is brilliant...', command='python 334.py', player='afplay')
