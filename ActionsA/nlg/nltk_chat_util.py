@@ -98,7 +98,7 @@ class Chat(object):
         :param str: The string to be mapped
         :rtype: str
         """
-        print('~~~~~')
+        #print('~~~~~')
         # check each pattern
         for (pattern, response) in self._pairs:
             match = pattern.match(string)
@@ -113,7 +113,7 @@ class Chat(object):
                 if resp[-2:] == '??': resp = resp[:-2] + '?'
                 return resp
 
-        print('Didnt return shit...')
+        #print('Didnt return shit...')
 
         #try matching strings with multiple hooks
         #brute forcing from pairs
@@ -128,7 +128,6 @@ class Chat(object):
                     if i > 0 and i < len(sub_x)-1:
                         sub_x[i] = '(.*)' + sub_x[i] + '(.*)'
                     i+=1
-                print(sub_x)
                 flag_sub_x = True
                 for each in sub_x:
                     lhs = re.compile(each, re.IGNORECASE)
@@ -137,7 +136,7 @@ class Chat(object):
                         flag_sub_x = False
                         break
                 if flag_sub_x:
-                    # recurse call would be cool but NOT EFFICIENT  
+                    # recurse call would be cool but NOT EFFICIENT
                     resp = random.choice(y)    # pick a random response
                     resp = self._wildcards(resp, match) # process wildcards
 
