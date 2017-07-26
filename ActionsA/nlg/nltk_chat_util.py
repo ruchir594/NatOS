@@ -53,7 +53,7 @@ class Chat(object):
         :param reflections: A mapping between first and second person expressions
         :rtype: None
         """
-
+        print(pairs)
         self._pairs = [(re.compile(x, re.IGNORECASE),y) for (x,y) in pairs]
         self._reflections = reflections
         self._regex = self._compile_reflections()
@@ -89,7 +89,7 @@ class Chat(object):
             pos = response.find('%')
         return response
 
-    def respond(self, str):
+    def respond(self, string):
         """
         Generate a response to the user input.
 
@@ -97,10 +97,10 @@ class Chat(object):
         :param str: The string to be mapped
         :rtype: str
         """
-
+        print('~~~~~')
         # check each pattern
         for (pattern, response) in self._pairs:
-            match = pattern.match(str)
+            match = pattern.match(string)
 
             # did the pattern match?
             if match:
@@ -111,6 +111,7 @@ class Chat(object):
                 if resp[-2:] == '?.': resp = resp[:-2] + '.'
                 if resp[-2:] == '??': resp = resp[:-2] + '?'
                 return resp
+        print('Didnt return shit...')
 
     # Hold a conversation with a chatbot
     def converse(self, quit="quit"):

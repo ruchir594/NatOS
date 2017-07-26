@@ -80,68 +80,106 @@ p35
 I2
 tp36
 Rp37
-(S'hi'
+(S'hello to you too'
 p38
-S'hello to you too'
-p39
+tp39
 tp40
-tp41
 a(g34
 (S'(.*)alcohol(.*)'
-p42
+p41
 I2
-tp43
-Rp44
+tp42
+Rp43
 (S'I will do that'
-p45
+p44
+tp45
 tp46
-tp47
+a(g34
+(S'alcohol'
+p47
+I2
+tp48
+Rp49
+(S'I want to try it'
+p50
+tp51
+tp52
 a(g34
 (S'thank you'
-p48
-I2
-tp49
-Rp50
-(S'Happy to help you'
-p51
-S'always here for you'
-p52
-S'I got your back'
 p53
+I2
 tp54
-tp55
+Rp55
+(S'Happy to help you'
+p56
+S'always here for you'
+p57
+S'I got your back'
+p58
+tp59
+tp60
 a(g34
 (S'(.*)per1(.*)'
-p56
+p61
 I2
-tp57
-Rp58
-(S'Excuses dont burn calories'
-p59
-S'Cutting calories doesnt start in the gym'
-p60
-tp61
 tp62
+Rp63
+(S'Excuses dont burn calories'
+p64
+S'Cutting calories doesnt start in the gym'
+p65
+tp66
+tp67
 a(g34
 (S'(.*)per2(.*)'
-p63
-I2
-tp64
-Rp65
-(S'Dont stop when you are tired stop when you are done'
-p66
-S'Eating crappy food is not a reward but a punishment'
-p67
-S'Once on the lips forever on the hips'
 p68
+I2
 tp69
-tp70
-asS'_regex'
+Rp70
+(S'Dont stop when you are tired stop when you are done'
 p71
+S'Eating crappy food is not a reward but a punishment'
+p72
+S'Once on the lips forever on the hips'
+p73
+tp74
+tp75
+a(g34
+(S'(.*)per3 per4(.*)'
+p76
+I2
+tp77
+Rp78
+(S'love is in the air'
+p79
+tp80
+tp81
+a(g34
+(S'(.*)per3_per4(.*)'
+p82
+I2
+tp83
+Rp84
+(S'true love is in the air'
+p85
+tp86
+tp87
+a(g34
+(S'(.*)lrp42(.*)'
+p88
+I2
+tp89
+Rp90
+(S'Fed up'
+p91
+tp92
+tp93
+asS'_regex'
+p94
 g34
 (S"\\b(you\\ were|you\\ are|you\\'ll|you\\'ve|i\\ was|yours|i\\'ll|i\\'ve|i\\ am|your|i\\'d|you|i\\'m|me|my|i)\\b"
-p72
+p95
 I2
-tp73
-Rp74
+tp96
+Rp97
 sb.

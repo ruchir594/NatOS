@@ -40,7 +40,7 @@ def lambda_function(a):
             scheduler.reminders(frequency='everyday', dobj=chatbot)
     else:
 
-        decepticon = autobot.suger(thispath)
+        '''decepticon = autobot.suger(thispath)
         #decepticon.spice()
         #decepticon.salt()
         j = decepticon.chef(a)
@@ -49,13 +49,15 @@ def lambda_function(a):
         for each in j:
             if each[1] == closest:
                 closest = each[0]
-                break
+                break'''
 
-        ret = chatbot.converse2(closest)
+        ret = chatbot.converse2(a)
     return ret
 
-print lambda_function('very well said i bet but i need more beer')
-print lambda_function('hello hello to you')
+#print lambda_function('very well said i bet but i need more beer')
+#print lambda_function('hello hello to you')
+print lambda_function('whats up with? per3 per4?')
+print lambda_function('hmm how about per3 and per4 ???')
 #scheduler.message(seconds=4, text='Ruchir works', player='afplay')
 #scheduler.message(seconds=4, text='Nitesh is brilliant...', command='python 334.py', player='afplay')
 #scheduler.message(seconds=7, command='afplay ../Chained\ to\ the\ Rhythm.mp3')
