@@ -145,8 +145,26 @@ class Chat(object):
                     if resp[-2:] == '??': resp = resp[:-2] + '?'
                     return resp
 
-        #Default response
-        return self.respond('DefaultResponse42')
+        # Default response
+        # Note: Recurse will be called only once to specify Default
+        # return self.respond('DefaultResponse42')
+        # -- greater risk of stack overflow with recursive definition --
+
+        # A Default Response must be set in Conversation.CSV
+
+        string = 'DefaultResponse'
+        for (pattern, response) in self._pairs:
+            match = pattern.match(string)
+
+            # did the pattern match?
+            if match:
+                resp = random.choice(response)    # pick a random response
+                resp = self._wildcards(resp, match) # process wildcards
+
+                # fix munged punctuation at the end
+                if resp[-2:] == '?.': resp = resp[:-2] + '.'
+                if resp[-2:] == '??': resp = resp[:-2] + '?'
+                return resp
 
 
     # Hold a conversation with a chatbot
