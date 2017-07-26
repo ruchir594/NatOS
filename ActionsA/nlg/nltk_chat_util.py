@@ -53,8 +53,9 @@ class Chat(object):
         :param reflections: A mapping between first and second person expressions
         :rtype: None
         """
-        print(pairs)
+
         self._pairs = [(re.compile(x, re.IGNORECASE),y) for (x,y) in pairs]
+        self._full_pairs = pairs
         self._reflections = reflections
         self._regex = self._compile_reflections()
 
@@ -111,7 +112,43 @@ class Chat(object):
                 if resp[-2:] == '?.': resp = resp[:-2] + '.'
                 if resp[-2:] == '??': resp = resp[:-2] + '?'
                 return resp
+
         print('Didnt return shit...')
+
+        #try matching strings with multiple hooks
+        #brute forcing from pairs
+
+        for (x, y) in self._full_pairs:
+            if x.find('_') != -1:
+                sub_x = x.split('_')
+                sub_x[0] = sub_x[0] + '(.*)'
+                sub_x[len(sub_x)-1] = '(.*)' + sub_x[len(sub_x)-1]
+                i=0
+                for each in sub_x:
+                    if i > 0 and i < len(sub_x)-1:
+                        sub_x[i] = '(.*)' + sub_x[i] + '(.*)'
+                    i+=1
+                print(sub_x)
+                flag_sub_x = True
+                for each in sub_x:
+                    lhs = re.compile(each, re.IGNORECASE)
+                    match = lhs.match(string)
+                    if not match:
+                        flag_sub_x = False
+                        break
+                if flag_sub_x:
+                    # recurse call would be cool but NOT EFFICIENT  
+                    resp = random.choice(y)    # pick a random response
+                    resp = self._wildcards(resp, match) # process wildcards
+
+                    # fix munged punctuation at the end
+                    if resp[-2:] == '?.': resp = resp[:-2] + '.'
+                    if resp[-2:] == '??': resp = resp[:-2] + '?'
+                    return resp
+
+        #Default response
+        return self.respond('DefaultResponse42')
+
 
     # Hold a conversation with a chatbot
     def converse(self, quit="quit"):
