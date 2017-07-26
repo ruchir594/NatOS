@@ -34,4 +34,14 @@ Conversation.csv lets you define simple communication standard. What should be t
 
 bot.py - This is where we give you the control. merely 10 lines here will make your bot compatible with NatOS.
 But we allow you to customize this the way you want. You could decide to not use our Architecture at all and code whatever you wish.
-You could send POST requests to your own servers you wish to do that. Adding a few lines to make our endpoint compatible is all you have to care about. 
+You could send POST requests to your own servers you wish to do that. Adding a few lines to make our endpoint compatible is all you have to care about.
+
+### Conversation.CSV
+
+It is a 2 pass system.
+
+1. Uses a NLTK based approach to pattern matching.
+
+a Pattern between asterisk 1. *super* or 2. *super duper* is matched.
+
+Strings "Ferrari builds Supercars" will be matched with first pattern, and a string  "Game of Thrones is Super Duper good" will be matched with both patterns.
