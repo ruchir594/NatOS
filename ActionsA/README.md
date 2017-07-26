@@ -42,6 +42,6 @@ It is a 2 pass system.
 
 1. Uses a NLTK based approach to pattern matching.
 
-a Pattern between asterisk 1. *super* or 2. *super duper* is matched.
+a Pattern between asterisk 1. \*super\* or 2. \*super duper\* is matched.
 
 Strings "Ferrari builds Supercars" will be matched with first pattern, and a string  "Game of Thrones is Super Duper good" will be matched with both patterns.
