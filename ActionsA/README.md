@@ -38,15 +38,20 @@ You could send POST requests to your own servers you wish to do that. Adding a f
 
 ### Conversation.CSV
 
+Rules
+1. CSV has 2 columns. First column defines pattern. Second Column defines possible response.
+2. Pattern is specified between \* (asterisk)
+3. Multiple patterns are separated by \_ (underscore)
+
 It is a 2 pass system.
 
-1 Uses a NLTK based approach to pattern matching.
+**1** Uses a NLTK based approach to pattern matching.
 
 a Pattern between asterisk 1. \*super car\* or 2. \*amazing\* is matched.
 
 Strings "Ferrari builds Super cars" will be matched with first pattern, and a string  "Game of Thrones is amazing" will be matched with both patterns.
 
-2 Uses a modification of NLTK chat util to match broken patterns.
+**2** Uses a modification of NLTK chat util to match broken patterns.
 
 Broken Patters are defined as a mixure of two patters. Let us say you want to match two substring \*super car\* and \*amazing\*.
 A pattern separated by '\_' (underscore) will allow you to do that.
@@ -54,10 +59,10 @@ A Pattern \*super car_amazing\* will yield such results.
 
 A string "Pagani makes more than super cars and they are amazing!" will be matched with above Pattern.
 
-3 It is important to note than Patterns are evaluated in linear order.
+3. It is important to note than Patterns are evaluated in linear order.
 
-You can set a "DefaultResponse" row in CSV which will be the default response.
+    You can set a "DefaultResponse" row in CSV which will be the default response.
 
-If no Patterns are matched, *None* will be returned.
+    If no Patterns are matched, *None* will be returned.
 
 -- Our heavily Modified NLTK Chat Util is at ActionsA/nlg/nltk_chat_util.py. Other Class and Methods used are from standard NLTK and does require that.
