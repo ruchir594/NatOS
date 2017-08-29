@@ -51,7 +51,7 @@ def generate_lines(path = 'undefined'):
     except Exception, e:
         raise NoFile(str(e))
 
-def build_lambda(thispath):
+def build_lambda(thispath, botname):
     chatbot = generate(path = thispath + 'conversation.csv')
-    f = open(thispath+'motivationbot', 'w')
+    f = open(thispath+botname, 'w')
     pickle.dump(chatbot, f)
