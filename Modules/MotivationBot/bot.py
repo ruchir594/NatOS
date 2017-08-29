@@ -13,6 +13,7 @@ from ActionsA.nlu import autobot
 from ActionsA import scheduler
 
 thispath = './Modules/MotivationBot/'
+thisbot = 'motivationbot'
 
 def getWords(data):
     return re.compile(r"[\w']+").findall(data)
@@ -22,9 +23,9 @@ def lambda_function(a):
     # if chatbot instance doesnt exist, we make it.
     if not os.path.isfile(thispath+'motivationbot'):
         print 'building chatbot instance...'
-        generate.build_lambda(thispath)
+        generate.build_lambda(thispath, thisbot)
     # loading local chatbot instance so heavy processing must not be needed everytime
-    f = open(thispath+'motivationbot', 'r')
+    f = open(thispath+thisbot, 'r')
     chatbot=pickle.load(f)
     # You code of handling stuff
     b = getWords(a)
