@@ -155,6 +155,25 @@ class stamps:
 
         self.checked = None
 
+        self.d1 = ['i', 'live', 'in', 'please', 'hi', 'give', 'find', 'who', 'what', 'my', 'hungry', 'near', 'me', 'thank', 'you', \
+                'want', 'to', 'eat', 'like','liked', 'I', 'can', 'you', 'suggest', 'of', 'is', 'are', 'near', 'there', 'some', \
+                'little', 'now', 'wanna', 'want', 'at', 'on', 'in', 'near', 'area', 'next', 'and', 'how', 'about', 'or', \
+                'the', 'a', 'an', 'about', 'for', 'with', 'should', 'could', 'would', 'out','time','person','year','way','day',\
+                'thing','man','world','life','hand','part','child','eye','woman','place','work','week', 'doing',\
+                'case','point','government','company','number','group','problem','fact','be','have','do','say',\
+                'get','make','go','know','take','see','come','think','look','want','give','use','find','tell', 'telling',\
+                'ask','work','seem','feel','try','leave','call','good','new','first','last','long','great','little','own','other',\
+                'old','right','big','high','different','small','large','next','early','young','important','few',\
+                'public','bad','same','able','to','of','in','for','on','with','at','by','from','up','about','into',\
+                'over','after','beneath','under','above','the','and','a','that','I','it','not','he','as','you', \
+                'this','but','his','they','her','she','or','an','will','my','one','all','would','there','their', 'talk', \
+                'talking', 'love', 'loved', 'hello', 'help', 'helping', 'helped', 'pleasure', 'bye', 'goodbye', 'care', 'later', \
+                'no','nothing', 'thanks', 'welcome', 'something', 'hey', 'am', 'month','year','week','day','hour','minute','min','second', \
+                'months','years','weeks','days','hours','minutes','mins','seconds','time', 'today', 'tomorrow', 'am', 'pm',\
+                'january', 'febuary', 'marth', 'april', 'may', 'june', 'july','august', 'september', 'october', 'november', 'december', \
+                'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday','km', 'kilometer', 'kilometers', 'meter', 'm',\
+                'cm', 'kms', 'miles', 'yards', 'feet', 'feets','evening', 'morning', 'afternoon', 'noon', 'night']
+
     def view(self):
         print ("self.protagonist```````", self.protagonist + "]")
         print ("self.number````````````", self.number)
@@ -341,23 +360,10 @@ class stamps:
 
     def just_location_plus(self):
         c = getWords_special_location(self.aliner)
-        d1 = ['i', 'live', 'in', 'please', 'hi', 'give', 'find', 'who', 'what', 'my', 'hungry', 'near', 'me', 'thank', 'you', \
-                'want', 'to', 'eat', 'like','liked', 'I', 'can', 'you', 'suggest', 'of', 'is', 'are', 'near', 'there', 'some', \
-                'little', 'now', 'wanna', 'want', 'at', 'on', 'in', 'near', 'area', 'next', 'and', 'how', 'about', 'or', \
-                'the', 'a', 'an', 'about', 'for', 'with', 'should', 'could', 'would', 'out','time','person','year','way','day',\
-                'thing','man','world','life','hand','part','child','eye','woman','place','work','week', 'doing',\
-                'case','point','government','company','number','group','problem','fact','be','have','do','say',\
-                'get','make','go','know','take','see','come','think','look','want','give','use','find','tell', 'telling',\
-                'ask','work','seem','feel','try','leave','call','good','new','first','last','long','great','little','own','other',\
-                'old','right','big','high','different','small','large','next','early','young','important','few',\
-                'public','bad','same','able','to','of','in','for','on','with','at','by','from','up','about','into',\
-                'over','after','beneath','under','above','the','and','a','that','I','it','not','he','as','you', \
-                'this','but','his','they','her','she','or','an','will','my','one','all','would','there','their', 'talk', \
-                'talking', 'love', 'loved', 'hello', 'help', 'helping', 'helped', 'pleasure', 'bye', 'goodbye', 'care', 'later', \
-                'no','nothing', 'thanks', 'welcome', 'something', 'hey']
+
         a = ''
         for c_cmall in c:
-            if c_cmall not in d1:
+            if c_cmall not in self.d1:
                 a = a + c_cmall.title() + ' '
             else:
                 a = a + c_cmall + ' '
@@ -385,27 +391,10 @@ class stamps:
 
     def baggage(self):
         b = self.message_text
-        d1 = ['i', 'live', 'in', 'please', 'hi', 'give', 'find', 'who', 'what', 'my', 'hungry', 'near', 'me', 'thank', 'you', \
-                'want', 'to', 'eat', 'like','liked', 'I', 'can', 'you', 'suggest', 'of', 'is', 'are', 'near', 'there', 'some', \
-                'little', 'now', 'wanna', 'want', 'at', 'on', 'in', 'near', 'area', 'next', 'and', 'how', 'about', 'or', \
-                'the', 'a', 'an', 'about', 'for', 'with', 'should', 'could', 'would', 'out','time','person','year','way','day',\
-                'thing','man','world','life','hand','part','child','eye','woman','place','work','week', 'doing',\
-                'case','point','government','company','number','group','problem','fact','be','have','do','say',\
-                'get','make','go','know','take','see','come','think','look','want','give','use','find','tell', 'telling',\
-                'ask','work','seem','feel','try','leave','call','good','new','first','last','long','great','little','own','other',\
-                'old','right','big','high','different','small','large','next','early','young','important','few',\
-                'public','bad','same','able','to','of','in','for','on','with','at','by','from','up','about','into',\
-                'over','after','beneath','under','above','the','and','a','that','I','it','not','he','as','you', \
-                'this','but','his','they','her','she','or','an','will','my','one','all','would','there','their', 'talk', \
-                'talking', 'love', 'loved', 'hello', 'help', 'helping', 'helped', 'pleasure', 'bye', 'goodbye', 'care', 'later', \
-                'no','nothing', 'thanks', 'welcome', 'something', 'hey', 'am', 'month','year','week','day','hour','minute','min','second', \
-                'months','years','weeks','days','hours','minutes','mins','seconds','time', 'today', 'tomorrow', 'am', 'pm',\
-                'january', 'febuary', 'marth', 'april', 'may', 'june', 'july','august', 'september', 'october', 'november', 'december', \
-                'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday','km', 'kilometer', 'kilometers', 'meter', 'm',\
-                'cm', 'kms', 'miles', 'yards', 'feet', 'feets','evening', 'morning', 'afternoon', 'noon', 'night']
+
         for i in range(len(self.checked)):
             if self.checked[i] is False:
-                if b[i][0] not in self.location and b[i][0] not in d1:
+                if b[i][0] not in self.location and b[i][0] not in self.d1:
                     self.baggage.append(b[i][0])
                     self.checked[i] = True
 
