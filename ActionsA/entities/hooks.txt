@@ -1,0 +1,20 @@
+background
+father
+mother
+season 1
+season 2
+season 3
+season 4
+season 5
+season 6
+s1
+s2
+s3
+s4
+s5
+s6
+kill list
+quotes
+sigil
+words
+seat
